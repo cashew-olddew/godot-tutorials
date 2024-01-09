@@ -1,0 +1,244 @@
+[gd_scene load_steps=19 format=3 uid="uid://brkskxjetwc3u"]
+
+[ext_resource type="Texture2D" uid="uid://n4ntfk0qe6xi" path="res://assets/desert-ruins.png" id="1_sg6wf"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_vknqq"]
+[ext_resource type="Script" path="res://Character.gd" id="3_gxv4b"]
+[ext_resource type="Texture2D" uid="uid://dnj72oyk6k63h" path="res://something.png" id="4_2mlj2"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7xbru"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7ud3f"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cpjql"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_giicn"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dbxn7"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jtgel"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hnu4p"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_snhht"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uee38"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qd8bh"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_suhsx"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwc82"]
+texture = ExtResource("1_sg6wf")
+1:1/0 = 0
+1:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7xbru")
+1:1/0/custom_data_0 = "wall"
+2:1/0 = 0
+2:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7xbru")
+2:1/0/custom_data_0 = "wall"
+3:1/0 = 0
+3:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7xbru")
+3:1/0/custom_data_0 = "wall"
+4:1/0 = 0
+4:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7xbru")
+4:1/0/custom_data_0 = "wall"
+5:1/0 = 0
+5:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_dbxn7")
+5:1/0/custom_data_0 = "wall"
+6:1/0 = 0
+6:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_snhht")
+6:1/0/custom_data_0 = "wall"
+7:1/0 = 0
+7:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_dbxn7")
+7:1/0/custom_data_0 = "wall"
+1:2/0 = 0
+1:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7xbru")
+1:2/0/custom_data_0 = "wall"
+2:2/0 = 0
+2:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7xbru")
+2:2/0/custom_data_0 = "wall"
+3:2/0 = 0
+3:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7xbru")
+3:2/0/custom_data_0 = "wall"
+4:2/0 = 0
+4:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7xbru")
+4:2/0/custom_data_0 = "wall"
+5:2/0 = 0
+5:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_hnu4p")
+5:2/0/custom_data_0 = "wall"
+6:2/0 = 0
+7:2/0 = 0
+7:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_suhsx")
+7:2/0/custom_data_0 = "wall"
+1:3/0 = 0
+1:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cpjql")
+1:3/0/custom_data_0 = "wall"
+2:3/0 = 0
+2:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cpjql")
+2:3/0/custom_data_0 = "wall"
+3:3/0 = 0
+3:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cpjql")
+3:3/0/custom_data_0 = "wall"
+4:3/0 = 0
+4:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cpjql")
+4:3/0/custom_data_0 = "wall"
+5:3/0 = 0
+5:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_dbxn7")
+5:3/0/custom_data_0 = "wall"
+6:3/0 = 0
+6:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_uee38")
+6:3/0/custom_data_0 = "wall"
+7:3/0 = 0
+7:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_dbxn7")
+7:3/0/custom_data_0 = "wall"
+1:4/0 = 0
+1:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_giicn")
+1:4/0/custom_data_0 = "wall"
+2:4/0 = 0
+2:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_giicn")
+2:4/0/custom_data_0 = "wall"
+3:4/0 = 0
+3:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_giicn")
+3:4/0/custom_data_0 = "wall"
+4:4/0 = 0
+4:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_giicn")
+4:4/0/custom_data_0 = "wall"
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+6:5/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_qd8bh")
+7:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+1:8/0 = 0
+1:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+1:8/0/custom_data_0 = "wall"
+2:8/0 = 0
+2:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+2:8/0/custom_data_0 = "wall"
+3:8/0 = 0
+3:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+3:8/0/custom_data_0 = "wall"
+4:8/0 = 0
+4:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+4:8/0/custom_data_0 = "wall"
+5:8/0 = 0
+5:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jtgel")
+5:8/0/custom_data_0 = "wall"
+6:8/0 = 0
+6:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jtgel")
+6:8/0/custom_data_0 = "wall"
+7:8/0 = 0
+7:8/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jtgel")
+7:8/0/custom_data_0 = "wall"
+1:9/0 = 0
+1:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+1:9/0/custom_data_0 = "wall"
+2:9/0 = 0
+2:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+2:9/0/custom_data_0 = "wall"
+3:9/0 = 0
+3:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+3:9/0/custom_data_0 = "wall"
+4:9/0 = 0
+4:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+4:9/0/custom_data_0 = "wall"
+5:9/0 = 0
+5:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jtgel")
+5:9/0/custom_data_0 = "wall"
+7:9/0 = 0
+7:9/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jtgel")
+7:9/0/custom_data_0 = "wall"
+1:10/0 = 0
+1:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+1:10/0/custom_data_0 = "wall"
+2:10/0 = 0
+2:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+2:10/0/custom_data_0 = "wall"
+3:10/0 = 0
+3:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+3:10/0/custom_data_0 = "wall"
+4:10/0 = 0
+4:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+4:10/0/custom_data_0 = "wall"
+5:10/0 = 0
+5:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jtgel")
+5:10/0/custom_data_0 = "wall"
+6:10/0 = 0
+6:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jtgel")
+6:10/0/custom_data_0 = "wall"
+7:10/0 = 0
+7:10/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_jtgel")
+7:10/0/custom_data_0 = "wall"
+1:11/0 = 0
+1:11/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+1:11/0/custom_data_0 = "wall"
+2:11/0 = 0
+2:11/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+2:11/0/custom_data_0 = "wall"
+3:11/0 = 0
+3:11/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+3:11/0/custom_data_0 = "wall"
+4:11/0 = 0
+4:11/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_7ud3f")
+4:11/0/custom_data_0 = "wall"
+5:11/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_00lgl"]
+occlusion_layer_0/light_mask = 1
+custom_data_layer_0/name = "name"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("TileSetAtlasSource_bwc82")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3ape"]
+size = Vector2(12, 12)
+
+[node name="Level" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 3
+tile_set = SubResource("TileSet_00lgl")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 327680, 1, 1, 393216, 1, 2, 131072, 3, 3, 393216, 1, 4, 131072, 3, 5, 393216, 1, 6, 131072, 3, 7, 393216, 1, 8, 393216, 1, 9, 131072, 3, 10, 458752, 1, 65546, 65536, 2, 131082, 65536, 2, 196618, 65536, 2, 262154, 65536, 2, 327690, 65536, 2, 393226, 65536, 2, 65536, 196608, 2, 131072, 196608, 2, 196608, 196608, 2, 262144, 196608, 2, 327680, 196608, 2, 393216, 196608, 2, 458752, 196608, 2, 524288, 196608, 2, 589824, 196608, 2, 458762, 65536, 2, 524298, 65536, 2, 589834, 65536, 2, 655370, 458752, 3, 655360, 327680, 3, 655361, 393216, 3, 655362, 393216, 3, 655363, 131072, 1, 655364, 393216, 3, 655365, 131072, 1, 655366, 131072, 1, 655367, 131072, 1, 655368, 131072, 1, 655369, 393216, 3, 131078, 65536, 8, 196614, 65536, 9, 262150, 65536, 10, 131079, 131072, 8, 196615, 131072, 9, 262151, 131072, 10, 131080, 196608, 8, 196616, 196608, 9, 262152, 196608, 10, 65537, 327680, 5, 131073, 327680, 6, 196609, 327680, 5, 262145, 327680, 6, 327681, 327680, 5, 393217, 327680, 5, 458753, 327680, 6, 524289, 327680, 5, 589825, 327680, 6, 393218, 65536, 8, 458754, 65536, 9, 524290, 65536, 10, 589826, 327680, 6, 196610, 327680, 5, 262146, 327680, 5, 327682, 327680, 6, 65538, 327680, 5, 131074, 327680, 6, 196611, 327680, 5, 262147, 327680, 6, 196612, 327680, 5, 262148, 327680, 6, 196613, 327680, 5, 262149, 327680, 6, 327683, 327680, 5, 393219, 131072, 8, 327684, 327680, 5, 393220, 131072, 8, 327685, 327680, 5, 393221, 131072, 8, 327686, 327680, 5, 393222, 196608, 8, 327687, 327680, 5, 393223, 327680, 6, 327688, 327680, 5, 393224, 327680, 5, 327689, 327680, 5, 393225, 327680, 6, 458755, 131072, 9, 524291, 131072, 10, 458756, 131072, 9, 524292, 131072, 10, 458757, 131072, 9, 524293, 131072, 10, 458758, 196608, 9, 524294, 196608, 10, 458759, 327680, 5, 524295, 327680, 5, 458760, 262144, 11, 524296, 327680, 5, 458761, 327680, 5, 524297, 327680, 5, 589827, 327680, 6, 589828, 327680, 6, 589829, 327680, 6, 589830, 327680, 6, 589831, 458752, 6, 589832, 393216, 2, 589833, 393216, 6, 196617, 327680, 5, 262153, 327680, 6, 65539, 327680, 5, 131075, 327680, 6, 65540, 327680, 5, 131076, 327680, 6, 65541, 327680, 5, 131077, 327680, 6, 65545, 327680, 5, 131081, 327680, 6, 65542, 327680, 5, 65543, 327680, 6, 65544, 327680, 6)
+script = ExtResource("2_vknqq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(4.55, 4.55)
+
+[node name="Character" type="CharacterBody2D" parent="."]
+position = Vector2(24, 24)
+script = ExtResource("3_gxv4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Character"]
+texture_filter = 3
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_2mlj2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
+shape = SubResource("RectangleShape2D_y3ape")
