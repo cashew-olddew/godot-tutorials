@@ -1,0 +1,197 @@
+[gd_scene load_steps=18 format=3 uid="uid://cm0tls4wh0hog"]
+
+[ext_resource type="Texture2D" uid="uid://ba0hxyrj7w1xg" path="res://Assets/fishSpritesheet.png" id="1_6oiga"]
+[ext_resource type="Texture2D" uid="uid://cdcinlogni05m" path="res://Assets/Objects/rock2.png" id="1_bo4ox"]
+[ext_resource type="Texture2D" uid="uid://di2n04brov3mb" path="res://Assets/Objects/rock1.png" id="2_olk66"]
+[ext_resource type="Texture2D" uid="uid://noed8u2xrsx7" path="res://Assets/Objects/fishTile_010.png" id="3_o7ke1"]
+[ext_resource type="Texture2D" uid="uid://cwup36qlvnn1u" path="res://Assets/Objects/fishTile_012.png" id="4_3m7rr"]
+[ext_resource type="Shader" path="res://Shaders/plant.gdshader" id="5_hpkjl"]
+[ext_resource type="Texture2D" uid="uid://p0trc22lnevi" path="res://Assets/Objects/fishTile_011.png" id="5_rffkb"]
+[ext_resource type="PackedScene" uid="uid://hdc06piiases" path="res://Objects/fish.tscn" id="15_7ar87"]
+
+[sub_resource type="Gradient" id="Gradient_gi5xm"]
+colors = PackedColorArray(0.4914, 0.64051, 0.78, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bywdh"]
+gradient = SubResource("Gradient_gi5xm")
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.527027, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m6uxx"]
+shader = ExtResource("5_hpkjl")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xxmsw"]
+shader = ExtResource("5_hpkjl")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qdrht"]
+shader = ExtResource("5_hpkjl")
+
+[sub_resource type="Shader" id="Shader_xoxo8"]
+code = "shader_type spatial;
+render_mode unshaded;
+
+uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
+uniform vec4 tint : source_color; // tint effect
+uniform float wave_speed = 3.0; // wave loop speed
+uniform float wave_freq = 10.0; // wave vertical freq
+uniform float wave_width = 1; // wave width 
+
+void fragment(){
+	vec2 scale_UV = SCREEN_UV;
+	vec2 wave_uv_offset;
+	wave_uv_offset.x = cos((TIME*wave_speed)+UV.x+UV.y*wave_freq*2.0)*wave_width*0.01;
+	ALBEDO = texture(SCREEN_TEXTURE, SCREEN_UV+wave_uv_offset).rgb * tint.rgb;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1iyq4"]
+render_priority = 0
+shader = SubResource("Shader_xoxo8")
+shader_parameter/tint = null
+shader_parameter/wave_speed = 3.0
+shader_parameter/wave_freq = 10.0
+shader_parameter/wave_width = 1.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsu4s"]
+texture = ExtResource("1_6oiga")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+0:4/0/terrain_set = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+0:5/0/terrain_set = 0
+1:5/0 = 0
+1:5/0/terrain_set = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+0:6/0/terrain_set = 0
+1:6/0 = 0
+1:6/0/terrain_set = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+0:7/0/terrain_set = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uoedi"]
+tile_size = Vector2i(64, 64)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Sand"
+terrain_set_0/terrain_0/color = Color(0.501961, 0.345098, 0.25098, 1)
+sources/1 = SubResource("TileSetAtlasSource_fsu4s")
+
+[node name="Fishtank" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578.5, 290)
+scale = Vector2(18.1094, 9.15625)
+texture = SubResource("GradientTexture2D_bywdh")
+
+[node name="Decorations" type="Node2D" parent="."]
+scale = Vector2(1.985, 2)
+
+[node name="Rock2" type="Sprite2D" parent="Decorations"]
+position = Vector2(99.2443, 211.5)
+scale = Vector2(0.503778, 0.5)
+texture = ExtResource("1_bo4ox")
+
+[node name="Rock3" type="Sprite2D" parent="Decorations"]
+position = Vector2(410.579, 205.25)
+scale = Vector2(0.700567, 0.695313)
+texture = ExtResource("1_bo4ox")
+
+[node name="Rock1" type="Sprite2D" parent="Decorations"]
+position = Vector2(386.398, 212)
+scale = Vector2(0.503778, 0.5)
+texture = ExtResource("2_olk66")
+
+[node name="FishTile010" type="Sprite2D" parent="Decorations"]
+material = SubResource("ShaderMaterial_m6uxx")
+position = Vector2(152.141, 202.5)
+scale = Vector2(0.503778, 0.5)
+texture = ExtResource("3_o7ke1")
+
+[node name="FishTile012" type="Sprite2D" parent="Decorations"]
+material = SubResource("ShaderMaterial_xxmsw")
+position = Vector2(542.569, 199.5)
+scale = Vector2(0.503778, 0.5)
+texture = ExtResource("4_3m7rr")
+
+[node name="FishTile011" type="Sprite2D" parent="Decorations"]
+material = SubResource("ShaderMaterial_qdrht")
+position = Vector2(286.146, 198.5)
+scale = Vector2(0.503778, 0.5)
+texture = ExtResource("5_rffkb")
+
+[node name="TileMap" type="TileMap" parent="."]
+material = SubResource("ShaderMaterial_1iyq4")
+tile_set = SubResource("TileSet_uoedi")
+format = 2
+layer_0/tile_data = PackedInt32Array(655360, 1, 3, 589824, 1, 3, 589825, 1, 3, 589826, 1, 3, 589827, 1, 3, 589828, 131073, 3, 589829, 1, 3, 589830, 1, 3, 589831, 1, 3, 589832, 196609, 2, 589833, 1, 3, 589834, 1, 3, 589835, 1, 3, 589836, 1, 3, 589837, 1, 3, 589838, 1, 3, 589839, 1, 3, 589840, 196609, 2, 589841, 1, 3, 589842, 1, 3, 655378, 1, 3, 655377, 1, 3, 655376, 1, 3, 655375, 1, 3, 655374, 1, 3, 655373, 1, 3, 655372, 1, 3, 655362, 1, 3, 655361, 1, 3, 655363, 1, 3, 655364, 1, 3, 655365, 1, 3, 655366, 1, 3, 655369, 1, 3, 655370, 1, 3, 655371, 1, 3, 655368, 1, 3, 655367, 1, 3, 524300, 131073, 3, 524288, 1, 3, 524289, 1, 3, 524290, 1, 3, 524291, 1, 3, 524292, 1, 3, 524293, 1, 3, 524294, 1, 3, 524295, 1, 3, 524296, 1, 3, 524297, 1, 3, 524298, 1, 3, 524299, 1, 3, 524301, 1, 3, 524302, 1, 3, 524303, 1, 3, 524304, 1, 3, 524305, 1, 3, 524306, 1, 3, 458752, 65537, 3, 458753, 65537, 3, 458754, 131073, 1, 458755, 65537, 3, 458756, 131073, 1, 458757, 65537, 3, 458758, 65537, 3, 458759, 65537, 3, 458760, 65537, 3, 458761, 65537, 3, 458762, 65537, 3, 458763, 131073, 1, 458764, 131073, 1, 458765, 131073, 1, 458766, 65537, 3, 458767, 65537, 3, 458768, 65537, 3, 458769, 65537, 3, 458770, 65537, 3, 524287, 65537, 3, 589823, 1, 3, 655359, 1, 3, 720895, 1, 3)
+
+[node name="Fish" parent="." instance=ExtResource("15_7ar87")]
+position = Vector2(200, 300)

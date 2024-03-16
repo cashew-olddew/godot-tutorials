@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://ic6e4rtsut64"]
+
+[ext_resource type="Texture2D" uid="uid://dshg6ri5rd0kw" path="res://Assets/Objects/fishTile_078.png" id="1_1fbi0"]
+[ext_resource type="Script" path="res://Objects/Fish.gd" id="1_6ecut"]
+[ext_resource type="Shader" path="res://Shaders/Fish.gdshader" id="2_mdwey"]
+[ext_resource type="Script" path="res://Objects/Gizmos.gd" id="4_xtjx4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6pxvm"]
+shader = ExtResource("2_mdwey")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4jhe"]
+size = Vector2(46, 22)
+
+[node name="Fish" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+wall_min_slide_angle = 0.0
+script = ExtResource("1_6ecut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_6pxvm")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1fbi0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w4jhe")
+
+[node name="Gizmos" type="Node2D" parent="."]
+script = ExtResource("4_xtjx4")
