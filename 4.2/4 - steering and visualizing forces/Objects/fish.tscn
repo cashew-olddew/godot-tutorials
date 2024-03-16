@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://hdc06piiases"]
+
+[ext_resource type="Script" path="res://Objects/fish.gd" id="1_jdvcu"]
+[ext_resource type="Shader" path="res://Shaders/Fish.gdshader" id="1_o6xqp"]
+[ext_resource type="Texture2D" uid="uid://dshg6ri5rd0kw" path="res://Assets/Objects/fishTile_078.png" id="1_rpvkp"]
+[ext_resource type="PackedScene" uid="uid://dri2c05l2pvyp" path="res://Components/steer_component.tscn" id="4_t5435"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2xrk8"]
+shader = ExtResource("1_o6xqp")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqcib"]
+size = Vector2(46, 26)
+
+[node name="Fish" type="CharacterBody2D"]
+script = ExtResource("1_jdvcu")
+
+[node name="SpriteFish" type="Sprite2D" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_2xrk8")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_rpvkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_mqcib")
+
+[node name="SteerComponent" parent="." instance=ExtResource("4_t5435")]

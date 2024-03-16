@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="threads"
+run/main_scene="res://fishtank.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://autoload/globals.gd"
+
+[display]
+
+window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
+
+[editor]
+
+import/use_multiple_threads=false
+
+[layer_names]
+
+2d_physics/layer_1="Food"
+2d_physics/layer_2="Fish"
+
+[navigation]
+
+avoidance/thread_model/avoidance_use_multiple_threads=false
+baking/thread_model/baking_use_multiple_threads=false
+
+[physics]
+
+2d/run_on_separate_thread=true

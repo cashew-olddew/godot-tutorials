@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ic6e4rtsut64"]
+
+[ext_resource type="Texture2D" uid="uid://dshg6ri5rd0kw" path="res://Assets/Objects/fishTile_078.png" id="1_1fbi0"]
+[ext_resource type="Script" path="res://Objects/Fish.gd" id="1_6ecut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4jhe"]
+size = Vector2(46, 22)
+
+[node name="Fish" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_6ecut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1fbi0")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w4jhe")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
