@@ -1,6 +1,6 @@
 # Localization
 
-This project corresponds to [Localization in Godot 4.2](https://www.youtube.com/watch?v=v0tJPsNNOM8)
+This project corresponds to [Boost your game's popularity with Localization](https://www.youtube.com/watch?v=v0tJPsNNOM8)
 
 ## Topics covered
 
