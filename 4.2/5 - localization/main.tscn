@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwjigrn6vmoic"]
+
+[ext_resource type="PackedScene" uid="uid://nfp15fmfyqia" path="res://character.tscn" id="1_d2m67"]
+[ext_resource type="Texture2D" uid="uid://bj5vcekxisuyi" path="res://assets/🧙 Mage Emoji_files/mage_1f9d9(16).png" id="2_df4en"]
+[ext_resource type="Texture2D" uid="uid://bynf2ibps7ib4" path="res://assets/cashew-face.png" id="3_btap4"]
+[ext_resource type="Texture2D" uid="uid://dkkejfwlhyst6" path="res://assets/laptop emoji.png" id="4_tk5hg"]
+[ext_resource type="Texture2D" uid="uid://dpb0sq66yc3vr" path="res://assets/healthbarUnder.png" id="5_koeqc"]
+[ext_resource type="Script" path="res://Button.gd" id="6_okvgc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_82jp4"]
+texture = ExtResource("5_koeqc")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6uptv"]
+texture = ExtResource("5_koeqc")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+modulate_color = Color(0.466667, 0.443137, 0.447059, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_afr2o"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Character" parent="." instance=ExtResource("1_d2m67")]
+position = Vector2(91, 95)
+texture = ExtResource("2_df4en")
+text = "COMPUTER"
+
+[node name="Cashew" parent="." instance=ExtResource("1_d2m67")]
+position = Vector2(123, 158)
+texture = ExtResource("3_btap4")
+text = "SEE"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(51, 96)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_tk5hg")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 135.0
+offset_top = 85.0
+offset_right = 229.0
+offset_bottom = 108.0
+text = "HELLO"
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 178.0
+offset_right = 267.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_82jp4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6uptv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_afr2o")
+text = "LANGUAGE"
+script = ExtResource("6_okvgc")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]

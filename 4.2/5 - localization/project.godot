@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Localization"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/scale=3.0
+window/stretch/scale_mode="integer"
+
+[internationalization]
+
+locale/translation_remaps={
+"res://icon.svg": PackedStringArray()
+}
+locale/translations=PackedStringArray("res://localization/en.po", "res://localization/es.po")
+locale/translations_pot_files=PackedStringArray("res://main.tscn")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
