@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf7otmaw7gjjl"]
+
+[ext_resource type="Script" path="res://text_bubble.gd" id="1_ur7yl"]
+[ext_resource type="FontFile" uid="uid://cjw7d2m63rmxx" path="res://assets/monogram.ttf" id="2_7wm5h"]
+[ext_resource type="StyleBox" uid="uid://dkic2ntxxjvwf" path="res://assets/text_bubble.tres" id="2_inixn"]
+
+[sub_resource type="FontVariation" id="FontVariation_x0sl1"]
+base_font = ExtResource("2_7wm5h")
+
+[node name="TextBubble" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ur7yl")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+offset_right = 35.0
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("2_inixn")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25098, 0.211765, 0.203922, 1)
+theme_override_fonts/font = SubResource("FontVariation_x0sl1")
+theme_override_font_sizes/font_size = 16

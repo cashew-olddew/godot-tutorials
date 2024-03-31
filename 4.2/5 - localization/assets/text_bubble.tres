@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dkic2ntxxjvwf"]
+
+[ext_resource type="Texture2D" uid="uid://dwyotl5odmxvh" path="res://assets/Bubbles.png" id="1_2ntjm"]
+
+[resource]
+texture = ExtResource("1_2ntjm")
+texture_margin_left = 17.0
+texture_margin_top = 9.0
+texture_margin_right = 17.0
+texture_margin_bottom = 13.0
