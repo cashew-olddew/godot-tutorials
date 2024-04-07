@@ -8,9 +8,9 @@ While tutorial videos are be useful for learning, they're not very useful when y
 
 You will usually be able to find the specific projects directly from the video descriptions, but if you want to navigate through the repository, each tutorial has its own folder, is named after the video title and is placed under a directory named after the godot version used in the tutorial
 
-## Assets and credits
+## Licensing, assets and credits
 
-If you want to use the assets from these tutorials, you can find them in the README.md files present under each tutorial project directory
+This project falls under the [CC0](LICENSE) license, meaning that you can basically do anything you want with the code here, even use it commercially. You do not have any obligation to credit me, but it would be highly appreciated. This license applies **only to** the projects and code. Any other assets (images, sounds, etc.) licenses will be specified for every project, but I would highly recommend checking them before use. I generally try to include only CC0 assets in my projects, however, slight deviations from CC0 might occur. Every used asset is credited in the README.md files present under each tutorial project directory.
 
 ## Contributions
 
