@@ -7,7 +7,7 @@
 Donations are appreciated and help me continue creating free content. Please donate only what you can afford. 🥜
 ## What is this?
 
-While tutorial videos are be useful for learning, they're not very useful when you want to quickly try out the project yourself or when you want to copy some of the code from the tutorial. This repository aims to provide the godot projects presented in all godot-related tutorials on my [youtube channel](https://www.youtube.com/@cashewolddew)
+While tutorial videos are be useful for learning, they're not very useful when you want to quickly try out the project yourself or when you want to copy some of the code from the tutorial. This repository aims to provide the godot projects presented in all godot-related tutorials on my [youtube channel](https://www.youtube.com/@CashewOldDew?sub_confirmation=1)
 
 ## Structure
 
