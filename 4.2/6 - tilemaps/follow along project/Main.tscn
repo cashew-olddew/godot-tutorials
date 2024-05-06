@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxjlx7fye8317"]
+
+[ext_resource type="PackedScene" uid="uid://3ym0et8acmnh" path="res://Character.tscn" id="2_2ue2i"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_2ue2i")]
+visible = false
+position = Vector2(74, 54)
+collision_mask = 2
