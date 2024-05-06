@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://3ym0et8acmnh"]
+
+[ext_resource type="Script" path="res://Character.gd" id="1_pgxao"]
+[ext_resource type="Texture2D" uid="uid://d13snrx2lcfyh" path="res://assets/KPlatformer/Tiles/Characters/tile_0000.png" id="1_y20vy"]
+[ext_resource type="Texture2D" uid="uid://cd03vh4dplgdd" path="res://assets/KPlatformer/Tiles/Characters/tile_0001.png" id="2_y517k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddhbj"]
+size = Vector2(12, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgqe8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y20vy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y517k")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y20vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y517k")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 5
+script = ExtResource("1_pgxao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_ddhbj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qgqe8")
+animation = &"walk"
