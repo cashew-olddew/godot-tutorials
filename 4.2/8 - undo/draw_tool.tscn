@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://blrcvo41uqudj"]
+
+[ext_resource type="Script" path="res://draw_tool.gd" id="1_1h2ef"]
+[ext_resource type="Texture2D" uid="uid://2i8ig7lmwltu" path="res://assets/reset-update-icon.png" id="1_que4e"]
+[ext_resource type="Texture2D" uid="uid://cekd7y6fjwxvr" path="res://assets/forward-restore-icon.png" id="2_rwq6v"]
+[ext_resource type="Texture2D" uid="uid://cvpnximjh5efh" path="res://assets/colors-icon.png" id="3_ddctt"]
+[ext_resource type="Texture2D" uid="uid://cc6hcy2axiwjm" path="res://assets/paint-roller-bucket-icon.png" id="4_7nw1v"]
+[ext_resource type="Texture2D" uid="uid://rihs5y6fvx84" path="res://assets/sweeper-cleaning-icon.png" id="4_wus1s"]
+
+[node name="DrawTool" type="Node2D"]
+script = ExtResource("1_1h2ef")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Undo" type="Button" parent="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "Undo"
+icon = ExtResource("1_que4e")
+
+[node name="Redo" type="Button" parent="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "Redo"
+icon = ExtResource("2_rwq6v")
+
+[node name="RandomizeColor" type="Button" parent="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "Randomize Color"
+icon = ExtResource("3_ddctt")
+
+[node name="Modulate" type="Button" parent="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "Modulate"
+icon = ExtResource("4_7nw1v")
+
+[node name="ClearHistory" type="Button" parent="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "Clear History"
+icon = ExtResource("4_wus1s")
+
+[node name="Canvas" type="ColorRect" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.0644, 0.0364, 0.07, 1)
+
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer/Undo" to="." method="_on_undo_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer/Redo" to="." method="_on_redo_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer/RandomizeColor" to="." method="_on_randomize_color_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer/Modulate" to="." method="_on_modulate_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/PanelContainer/HBoxContainer/ClearHistory" to="." method="_on_clear_history_button_down"]
+[connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/Canvas" to="." method="_on_canvas_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/Canvas" to="." method="_on_canvas_mouse_exited"]
