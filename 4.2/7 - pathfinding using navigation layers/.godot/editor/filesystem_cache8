@@ -1,0 +1,52 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1715624236
+food.gd::GDScript::-1::1715507452::0::1::::<>Area2D<>::
+food.tscn::PackedScene::8465574470467019665::1715546707::0::1::::<><>::uid://du82iplobbl42::::res://assets/food.png<>res://food.gd
+icon.svg::CompressedTexture2D::5759015156380496609::1715454628::1715454633::1::::<><>::
+main.tscn::PackedScene::159526654208317279::1715546707::0::1::::<><>::uid://dgp0puc5rkmgx::::res://assets/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png<>uid://ddcuq5wwunva3::::res://player.tscn<>uid://bcyisi435qdac::::res://assets/Sprout Lands - Sprites - Basic pack/Objects/Free_Chicken_House.png<>res://TileMap.gd<>uid://dvytr2mlqnwtn::::res://seeker.tscn
+player.gd::GDScript::-1::1715507147::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::7375201860772370264::1715546707::0::1::::<><>::uid://cn3b6g7pc6shg::::res://assets/character/character.png<>res://player.gd
+Seeker.gd::GDScript::-1::1715537847::0::1::::<>CharacterBody2D<>::
+seeker.tscn::PackedScene::8683958252124178867::1715546708::0::1::::<><>::res://Seeker.gd<>uid://48a8ipffbnj0::::res://assets/Sprout Lands - Sprites - Basic pack/Characters/Free Chicken Sprites.png
+TileMap.gd::GDScript::-1::1715546706::0::1::::<>TileMap<>::
+::res://assets/::1715549387
+chick1.png::CompressedTexture2D::711204650616685968::1715546876::1715549387::1::::<><>::
+Chick2.png::CompressedTexture2D::1251165421427005504::1715545828::1715546019::1::::<><>::
+food-export.png::CompressedTexture2D::7061076029652850023::1715546938::1715549387::1::::<><>::
+food.png::CompressedTexture2D::8632817840360443193::1715505148::1715505154::1::::<><>::
+::res://assets/character/::1715499105
+character.png::CompressedTexture2D::5743215353657400756::1715452754::1715455426::1::::<><>::
+something.png::CompressedTexture2D::7027514514366343021::1715499104::1715499105::1::::<><>::
+::res://assets/Sprout Lands - Sprites - Basic pack/::1715499624
+read_me.txt::TextFile::-1::1657805114::0::1::::<><>::
+::res://assets/Sprout Lands - Sprites - Basic pack/Characters/::1715499706
+Basic Charakter Actions.png::CompressedTexture2D::7485689997516535773::1646999940::1715499706::1::::<><>::
+Basic Charakter Spritesheet.png::CompressedTexture2D::4135509905226743009::1644642782::1715499706::1::::<><>::
+Egg_And_Nest.png::CompressedTexture2D::5777953447298262685::1688767316::1715499706::1::::<><>::
+Free Chicken Sprites.png::CompressedTexture2D::2103660306178554167::1686876318::1715499706::1::::<><>::
+Free Cow Sprites.png::CompressedTexture2D::7944943471432019368::1642824810::1715499706::1::::<><>::
+Tools.png::CompressedTexture2D::3258848479231211713::1647000162::1715499706::1::::<><>::
+::res://assets/Sprout Lands - Sprites - Basic pack/Objects/::1715621381
+Basic_Furniture.png::CompressedTexture2D::8060728456092864481::1640154806::1715499706::1::::<><>::
+Basic_Grass_Biom_things.png::CompressedTexture2D::7598525762396845265::1641367164::1715499706::1::::<><>::
+Basic_Plants.png::CompressedTexture2D::4911147263679234334::1640152444::1715499706::1::::<><>::
+Basic_tools_and_meterials.png::CompressedTexture2D::306929735934314344::1647000488::1715499706::1::::<><>::
+Chest.png::CompressedTexture2D::1456172937597047628::1643097086::1715499706::1::::<><>::
+coop.png::CompressedTexture2D::1538232194630138667::1715621381::1715624238::1::::<><>::
+Egg_item.png::CompressedTexture2D::7446989489836466410::1686877278::1715499706::1::::<><>::
+Free_Chicken_House.png::CompressedTexture2D::2576861783598063790::1715621355::1715624237::1::::<><>::
+Paths.png::CompressedTexture2D::8850788787313263454::1642823964::1715499706::1::::<><>::
+Simple_Milk_and_grass_item.png::CompressedTexture2D::4025677119171326523::1642904286::1715499706::1::::<><>::
+Wood_Bridge.png::CompressedTexture2D::4700190593058133626::1642824030::1715499706::1::::<><>::
+::res://assets/Sprout Lands - Sprites - Basic pack/Sprout Lands color pallet/::1715499706
+Sprout Lands defautlt palette snip.PNG::CompressedTexture2D::2410445518006883792::1689714158::1715499706::1::::<><>::
+Sprout Lands defautlt palette.png::CompressedTexture2D::3162303948168512624::1689714086::1715499706::1::::<><>::
+::res://assets/Sprout Lands - Sprites - Basic pack/Tilesets/::1715499706
+Bitmask references 1.png::CompressedTexture2D::9016174074262691313::1702890942::1715499706::1::::<><>::
+Bitmask references 2.png::CompressedTexture2D::3106309569228823638::1702890946::1715499706::1::::<><>::
+Fences.png::CompressedTexture2D::6211384151326132158::1640153732::1715499706::1::::<><>::
+Grass.png::CompressedTexture2D::3977369550244525395::1702905652::1715499706::1::::<><>::
+Hills.png::CompressedTexture2D::7612906545888928435::1702905262::1715499706::1::::<><>::
+Tilled_Dirt.png::CompressedTexture2D::9047176864185384076::1714495808::1715499706::1::::<><>::
+Water.png::CompressedTexture2D::2063336430534972409::1640153322::1715499706::1::::<><>::
+Wooden House.png::CompressedTexture2D::5396405893436065505::1640154846::1715499706::1::::<><>::
