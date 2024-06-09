@@ -4,7 +4,7 @@ This project corresponds to [The EASIEST way to add Undo and Redo in Godot 4.2](
 
 ## Topics covered
 
-- [UndoRedo](https://docs.godotengine.org/en/stable/classes/class_undoredo.)html#class-undoredo-method-add-undo-method
+- [UndoRedo](https://docs.godotengine.org/en/stable/classes/class_undoredo.html#class-undoredo-method-add-undo-method)
 - [Line2D](https://docs.godotengine.org/en/stable/classes/class_line2d.html)
 - [Input Events](https://docs.godotengine.org/en/stable/tutorials/best_practices/godot_notifications.html#process-vs-physics-process-vs-input)
 

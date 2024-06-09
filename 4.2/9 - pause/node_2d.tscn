@@ -1,0 +1,241 @@
+[gd_scene load_steps=25 format=3 uid="uid://dv3jdrp68bske"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_mr4vb"]
+[ext_resource type="Texture2D" uid="uid://big68rwrkihxu" path="res://BubbleSimple.png" id="2_y3k76"]
+[ext_resource type="Texture2D" uid="uid://btmd2m4km7cbo" path="res://Menu.png" id="3_1lmc7"]
+[ext_resource type="Script" path="res://BubblesWhite.gd" id="3_1ws07"]
+
+[sub_resource type="Gradient" id="Gradient_sdn1l"]
+colors = PackedColorArray(0.222927, 0.477679, 0.695367, 1, 0.432847, 0.692613, 0.794506, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_15spr"]
+gradient = SubResource("Gradient_sdn1l")
+fill_from = Vector2(0.518349, 1)
+fill_to = Vector2(0.449541, 0)
+
+[sub_resource type="Shader" id="Shader_exd12"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.2.2.stable's CanvasItemMaterial.
+
+shader_type canvas_item;
+render_mode blend_mix;
+uniform int particles_anim_h_frames;
+uniform int particles_anim_v_frames;
+uniform bool particles_anim_loop;
+
+uniform float wiggle_amplitude: hint_range(0.0, 10.0);
+uniform float wiggle_frequency: hint_range(0.0, 10.0);
+
+uniform bool shader_paused = false;
+
+void vertex() {
+    float h_frames = float(particles_anim_h_frames);
+    float v_frames = float(particles_anim_v_frames);
+    VERTEX.xy /= vec2(h_frames, v_frames);
+    float particle_total_frames = float(particles_anim_h_frames * particles_anim_v_frames);
+    float particle_frame = floor(INSTANCE_CUSTOM.z * float(particle_total_frames));
+    if (!particles_anim_loop) {
+        particle_frame = clamp(particle_frame, 0.0, particle_total_frames - 1.0);
+    } else {
+        particle_frame = mod(particle_frame, particle_total_frames);
+    }
+    UV /= vec2(h_frames, v_frames);
+    UV += vec2(mod(particle_frame, h_frames) / h_frames, floor((particle_frame + 0.5) / h_frames) / v_frames);
+
+    // Calculate the time-based offset for the wiggle effect
+    float time = 0.0;
+	if (!shader_paused) {
+		time = TIME * wiggle_frequency;
+	}
+
+    // Apply wiggle effect using sine wave
+    float offset = sin(VERTEX.y * 0.05 + time) * wiggle_amplitude;
+
+    // Adjust the x position with the calculated offset
+    VERTEX.x += offset;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6km8v"]
+shader = SubResource("Shader_exd12")
+shader_parameter/particles_anim_h_frames = 1
+shader_parameter/particles_anim_v_frames = 1
+shader_parameter/particles_anim_loop = false
+shader_parameter/wiggle_amplitude = 2.93
+shader_parameter/wiggle_frequency = 7.58
+shader_parameter/shader_paused = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xyy65"]
+texture = ExtResource("3_1lmc7")
+expand_margin_left = 100.0
+expand_margin_top = 100.0
+expand_margin_right = 100.0
+expand_margin_bottom = 100.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_72tts"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ajkx3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8adv6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v12gd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sg5ox"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sob46"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jft1f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0b2pr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_klvxf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lamd2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8emm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gu6hg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4f83u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hwwlo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7gxl"]
+
+[node name="Main" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_mr4vb")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(575.5, 325.5)
+scale = Vector2(18.0156, 10.2031)
+texture = SubResource("GradientTexture2D_15spr")
+
+[node name="BubblesWhite" type="CPUParticles2D" parent="."]
+process_mode = 1
+material = SubResource("ShaderMaterial_6km8v")
+position = Vector2(103, 815)
+amount = 30
+lifetime = 10.0
+texture = ExtResource("2_y3k76")
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, -1)
+spread = 5.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 208.74
+initial_velocity_max = 253.97
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+script = ExtResource("3_1ws07")
+
+[node name="BubblesPink" type="CPUParticles2D" parent="."]
+process_mode = 2
+modulate = Color(1, 0.51975, 0.989442, 1)
+material = SubResource("ShaderMaterial_6km8v")
+position = Vector2(389, 817)
+amount = 30
+lifetime = 10.0
+texture = ExtResource("2_y3k76")
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, -1)
+spread = 5.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 208.74
+initial_velocity_max = 253.97
+scale_amount_min = 0.05
+scale_amount_max = 0.4
+anim_offset_min = 0.2
+anim_offset_max = 0.2
+
+[node name="BubblesGreen" type="CPUParticles2D" parent="."]
+process_mode = 3
+modulate = Color(0.209279, 0.915895, 0.885288, 1)
+material = SubResource("ShaderMaterial_6km8v")
+position = Vector2(719, 809)
+amount = 30
+lifetime = 10.0
+texture = ExtResource("2_y3k76")
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, -1)
+spread = 5.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 208.74
+initial_velocity_max = 253.97
+scale_amount_min = 0.05
+scale_amount_max = 0.4
+anim_offset_min = 0.8
+anim_offset_max = 0.8
+
+[node name="BubblesOrange" type="CPUParticles2D" parent="."]
+process_mode = 4
+material = SubResource("ShaderMaterial_6km8v")
+position = Vector2(1034, 819)
+amount = 30
+lifetime = 10.0
+texture = ExtResource("2_y3k76")
+emission_shape = 1
+emission_sphere_radius = 128.0
+direction = Vector2(0, -1)
+spread = 5.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 208.74
+initial_velocity_max = 253.97
+scale_amount_min = 0.05
+scale_amount_max = 0.4
+color = Color(0.98, 0.538837, 0.2646, 0.764706)
+anim_offset_min = 0.4
+anim_offset_max = 0.4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -20.0
+offset_right = 60.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_xyy65")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+
+[node name="ButtonResume" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_72tts")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ajkx3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8adv6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v12gd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sg5ox")
+text = "Resume Game
+"
+
+[node name="ButtonNew" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sob46")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jft1f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0b2pr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_klvxf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lamd2")
+text = "New Game"
+
+[node name="ButtonExit" type="Button" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u8emm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gu6hg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4f83u")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hwwlo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a7gxl")
+text = "Exit Game
+"
