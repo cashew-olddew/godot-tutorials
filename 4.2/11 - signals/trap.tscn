@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhw3ghedvx2gx"]
+
+[ext_resource type="Texture2D" uid="uid://bdyyxijif4l6l" path="res://assets/Default (64px)/wall_trap.png" id="1_dpnad"]
+[ext_resource type="Script" path="res://trap.gd" id="1_y7kdi"]
+
+[node name="Trap" type="Node2D"]
+script = ExtResource("1_y7kdi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dpnad")
+
+[node name="SpawningPoints" type="Node2D" parent="."]
+
+[node name="SpawnTop" type="Marker2D" parent="SpawningPoints"]
+position = Vector2(0, 15)
+
+[node name="SpawnBot" type="Marker2D" parent="SpawningPoints"]
+z_index = 1
+position = Vector2(0, -15)
