@@ -1,0 +1,15 @@
+Panel
+Sprite2D
+TextureRect
+Label
+HBoxContainer
+CanvasLayer
+PointLight2D
+Node2D
+Node
+CollisionShape2D
+Area2D
+DirectionalLight2D
+CharacterBody2D
+Marker2D
+AudioStreamPlayer2D
