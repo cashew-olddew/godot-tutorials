@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://btpkk31b4v3y2"]
+
+[ext_resource type="Script" path="res://character.gd" id="1_cydlx"]
+[ext_resource type="Texture2D" uid="uid://be2wvri3dow7l" path="res://assets/Default (64px)/Characters/yellow_character.png" id="2_yyxl3"]
+[ext_resource type="Texture2D" uid="uid://cgejjedwhjq4r" path="res://assets/Default (64px)/Items/weapon_sword.png" id="3_2jww7"]
+[ext_resource type="Texture2D" uid="uid://dmfvidps4owfs" path="res://assets/Default (64px)/Characters/yellow_hand.png" id="4_yjid2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_73e4f"]
+radius = 20.025
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 7
+motion_mode = 1
+script = ExtResource("1_cydlx")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("2_yyxl3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_73e4f")
+
+[node name="Hands" type="Node2D" parent="."]
+
+[node name="Sword" type="Sprite2D" parent="Hands"]
+position = Vector2(40, -32)
+texture = ExtResource("3_2jww7")
+
+[node name="Right" type="Sprite2D" parent="Hands"]
+position = Vector2(39, -12)
+texture = ExtResource("4_yjid2")
