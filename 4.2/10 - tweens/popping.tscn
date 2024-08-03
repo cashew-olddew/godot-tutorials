@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjsyvlpbwg8fv"]
+
+[ext_resource type="PackedScene" uid="uid://djo16pfs8cp52" path="res://main.tscn" id="1_q6cal"]
+[ext_resource type="Script" path="res://Container.gd" id="2_1a0k0"]
+[ext_resource type="Texture2D" uid="uid://dox7auv3f2jsu" path="res://assets/characters/red_body_circle.png" id="3_wjuel"]
+[ext_resource type="Texture2D" uid="uid://d1vu8w7lhl5lo" path="res://assets/characters/red_body_rhombus.png" id="4_yd1ko"]
+[ext_resource type="Texture2D" uid="uid://2sv46qdpox31" path="res://assets/characters/red_body_square.png" id="5_fc5s5"]
+
+[node name="Main" instance=ExtResource("1_q6cal")]
+
+[node name="Container" type="Node2D" parent="." index="1"]
+script = ExtResource("2_1a0k0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Container" index="0"]
+position = Vector2(224, 193)
+texture = ExtResource("3_wjuel")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Container" index="1"]
+position = Vector2(339, 193)
+texture = ExtResource("3_wjuel")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Container" index="2"]
+position = Vector2(451, 189)
+texture = ExtResource("4_yd1ko")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Container" index="3"]
+position = Vector2(563, 187)
+texture = ExtResource("4_yd1ko")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Container" index="4"]
+position = Vector2(680, 185)
+texture = ExtResource("5_fc5s5")
