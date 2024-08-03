@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://1fa1lk3ctr5d"]
+
+[ext_resource type="PackedScene" uid="uid://djo16pfs8cp52" path="res://main.tscn" id="1_rdoa3"]
+[ext_resource type="Script" path="res://Easing.gd" id="2_1rdya"]
+[ext_resource type="Texture2D" uid="uid://nqiljtvqn83o" path="res://assets/characters/green_body_rhombus.png" id="3_l7564"]
+[ext_resource type="Texture2D" uid="uid://ccspel33p1icw" path="res://assets/characters/face_j.png" id="4_wqpjg"]
+[ext_resource type="Texture2D" uid="uid://bx8absrs1d7jj" path="res://assets/characters/face_f.png" id="5_ruxnv"]
+
+[node name="Main" instance=ExtResource("1_rdoa3")]
+script = ExtResource("2_1rdya")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -23)
+
+[node name="Daniel" type="Node2D" parent="." index="1"]
+position = Vector2(365, 350)
+
+[node name="Body" type="Sprite2D" parent="Daniel" index="0"]
+texture = ExtResource("3_l7564")
+metadata/_edit_lock_ = true
+
+[node name="Face" type="Sprite2D" parent="Daniel" index="1"]
+texture = ExtResource("4_wqpjg")
+metadata/_edit_lock_ = true
+
+[node name="The Cooler Daniel" type="Node2D" parent="." index="2"]
+position = Vector2(560, 350)
+
+[node name="Body" type="Sprite2D" parent="The Cooler Daniel" index="0"]
+texture = ExtResource("3_l7564")
+metadata/_edit_lock_ = true
+
+[node name="Face" type="Sprite2D" parent="The Cooler Daniel" index="1"]
+texture = ExtResource("5_ruxnv")
+metadata/_edit_lock_ = true

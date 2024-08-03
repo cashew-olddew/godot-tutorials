@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://pecw5frhgu0i"]
+
+[ext_resource type="PackedScene" uid="uid://djo16pfs8cp52" path="res://main.tscn" id="1_hx35a"]
+[ext_resource type="Script" path="res://Blow.gd" id="2_63rk6"]
+[ext_resource type="Texture2D" uid="uid://ndi1bjqr5cbc" path="res://assets/characters/yellow_body_circle.png" id="2_d6ron"]
+[ext_resource type="Texture2D" uid="uid://cohnynqim6uee" path="res://assets/characters/face_i.png" id="3_36uqr"]
+
+[node name="Main" instance=ExtResource("1_hx35a")]
+
+[node name="Blow" type="Node2D" parent="." index="1"]
+position = Vector2(553, 175)
+script = ExtResource("2_63rk6")
+
+[node name="Body" type="Sprite2D" parent="Blow" index="0"]
+texture = ExtResource("2_d6ron")
+metadata/_edit_lock_ = true
+
+[node name="Face" type="Sprite2D" parent="Blow" index="1"]
+texture = ExtResource("3_36uqr")
+metadata/_edit_lock_ = true
