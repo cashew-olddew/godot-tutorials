@@ -1,10 +1,5 @@
 # Godot Tutorials
 
-## Support
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H2XSCXW)
-
-Donations are appreciated and help me continue creating free content. Please donate only what you can afford. 🥜
 ## What is this?
 
 While tutorial videos are be useful for learning, they're not very useful when you want to quickly try out the project yourself or when you want to copy some of the code from the tutorial. This repository aims to provide the godot projects presented in all godot-related tutorials on my [youtube channel](https://www.youtube.com/@CashewOldDew?sub_confirmation=1)
@@ -26,3 +21,9 @@ If you find any:
 - imporvement ideas
 
 feel free to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#about-forks) this repository and suggest a change or to contact me directly
+
+## Support
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H2XSCXW)
+
+Donations are appreciated and help me continue creating free content. Please donate only what you can afford. 🥜
