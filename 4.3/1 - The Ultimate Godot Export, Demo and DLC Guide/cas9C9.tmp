@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhjd5vo7x6v0l"]
+
+[ext_resource type="Script" path="res://cashew.gd" id="1_6myly"]
+[ext_resource type="Texture2D" uid="uid://boja6b6lgicaf" path="res://assets/Cashew.png" id="1_wqmu1"]
+
+[node name="Cashew" type="Area2D"]
+script = ExtResource("1_6myly")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(14, 195, 60, 170, 105, 120, 135, -2, 126, -78, 108, -113, 81, -143, 19, -179, -49, -191, -85, -187, -113, -174, -143, -143, -149, -98, -137, -76, -105, -64, -69, -53, -66, -32, -55, -21, -46, 8, -40, 35, -47, 58, -65, 104, -64, 142, -50, 173, -27, 191)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wqmu1")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

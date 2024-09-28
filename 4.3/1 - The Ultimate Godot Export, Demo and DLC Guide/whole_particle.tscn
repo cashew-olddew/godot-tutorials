@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://5nypc0kivxcw"]
+
+[sub_resource type="GDScript" id="GDScript_8fjkf"]
+script/source = "class_name WholeParticle
+extends Node2D
+
+@export var particle: PackedScene
+@export var sound: AudioStream
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	var particle_instance = particle.instantiate() 
+	add_child(particle_instance)
+		
+	var audio_instance: AudioStreamPlayer2D = AudioStreamPlayer2D.new()
+	audio_instance.stream = sound
+	add_child(audio_instance)
+	pass # Replace with function body.
+"
+
+[node name="WholeParticle" type="Node2D"]
+script = SubResource("GDScript_8fjkf")

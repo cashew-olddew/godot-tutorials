@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddo6ptpdhrj05"]
+
+[ext_resource type="Texture2D" uid="uid://boja6b6lgicaf" path="res://assets/Cashew.png" id="1_36a31"]
+
+[sub_resource type="Curve" id="Curve_77kcy"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, -37.3626), 0.0, 0.0, 0, 0, Vector2(1, 41.7582), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_cmhlu"]
+_data = [Vector2(0.123457, 0.758242), 0.0, 0.0785391, 0, 0, Vector2(0.983539, 0.0219779), -0.272483, 0.0, 0, 0]
+point_count = 2
+
+[node name="Bursticles" type="CPUParticles2D"]
+z_index = 1
+emitting = false
+amount = 10
+lifetime = 0.4
+one_shot = true
+speed_scale = 0.5
+explosiveness = 1.0
+texture = ExtResource("1_36a31")
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 300.0
+angular_velocity_min = 27.28
+angular_velocity_max = 720.0
+linear_accel_min = -30.53
+linear_accel_max = 15.27
+linear_accel_curve = SubResource("Curve_77kcy")
+scale_amount_min = 0.08
+scale_amount_max = 0.12
+scale_amount_curve = SubResource("Curve_cmhlu")

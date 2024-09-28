@@ -1,0 +1,244 @@
+[gd_scene load_steps=20 format=3 uid="uid://ecq74dgqxtya"]
+
+[ext_resource type="PackedScene" uid="uid://bhjd5vo7x6v0l" path="res://cashew.tscn" id="1_hov4r"]
+[ext_resource type="Script" path="res://main.gd" id="1_sl7vs"]
+[ext_resource type="Texture2D" uid="uid://biq2ps5q8mcj2" path="res://assets/Pattern.png" id="2_yeiw4"]
+[ext_resource type="Texture2D" uid="uid://c0kify1l2255k" path="res://assets/peanuts/peanut_1.png" id="3_adijh"]
+[ext_resource type="Texture2D" uid="uid://d1bdt41rkxsgu" path="res://assets/Banner.png" id="3_wfo5j"]
+[ext_resource type="Texture2D" uid="uid://boyvs7gc1hxl6" path="res://assets/peanuts/peanut_2.png" id="4_rpmrg"]
+[ext_resource type="FontFile" uid="uid://t0qic6d7vhhd" path="res://assets/RibeyeMarrow-Regular.ttf" id="5_jix41"]
+[ext_resource type="Texture2D" uid="uid://bdxx43rlcn5wo" path="res://assets/peanuts/peanut_3.png" id="5_no4qx"]
+[ext_resource type="Script" path="res://label_game.gd" id="5_xlccp"]
+[ext_resource type="Texture2D" uid="uid://bqgh0q1oj4ig4" path="res://assets/peanuts/peanut_4.png" id="6_sey33"]
+[ext_resource type="Texture2D" uid="uid://bs1p76876q0dg" path="res://assets/peanuts/peanut_5.png" id="7_yd47o"]
+[ext_resource type="Texture2D" uid="uid://o1bsdx4qp1it" path="res://assets/peanuts/peanut_6.png" id="8_rokex"]
+[ext_resource type="Texture2D" uid="uid://5o6b1m5xv1ot" path="res://assets/peanuts/peanut_8.png" id="10_6li6x"]
+[ext_resource type="Texture2D" uid="uid://sym6mjkug06v" path="res://assets/peanuts/peanut_9.png" id="11_vsf1t"]
+[ext_resource type="PackedScene" uid="uid://c7hf8ddoaaa6y" path="res://particle_queue.tscn" id="13_frj8c"]
+[ext_resource type="PackedScene" uid="uid://ddo6ptpdhrj05" path="res://bursticle.tscn" id="14_ly4wi"]
+[ext_resource type="AudioStream" uid="uid://m240pg61x5ag" path="res://assets/plastic-crunch-83779.mp3" id="15_jc5xm"]
+[ext_resource type="PackedScene" uid="uid://l6upph0nkpyk" path="res://rays.tscn" id="15_oisfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mryim"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_sl7vs")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_yeiw4")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+offset_top = 52.0
+offset_right = 1920.0
+offset_bottom = 325.0
+texture = ExtResource("3_wfo5j")
+region_rect = Rect2(0, 50, 400, 311)
+patch_margin_top = 93
+patch_margin_bottom = 180
+axis_stretch_horizontal = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.041
+anchor_right = 1.0
+anchor_bottom = 0.144
+offset_top = 63.807
+offset_bottom = 163.688
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mryim")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NinePatchRect/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = -2
+
+[node name="LabelGame" type="Label" parent="CanvasLayer/NinePatchRect/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.831373, 0.517647, 0.270588, 1)
+theme_override_colors/font_shadow_color = Color(0.513078, 0.278604, 0.105187, 1)
+theme_override_fonts/font = ExtResource("5_jix41")
+theme_override_font_sizes/font_size = 42
+text = "Peanut Clicker 3000"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_xlccp")
+
+[node name="LabelScore" type="Label" parent="CanvasLayer/NinePatchRect/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.831373, 0.517647, 0.270588, 1)
+theme_override_colors/font_shadow_color = Color(0.588235, 0.341176, 0.156863, 1)
+theme_override_fonts/font = ExtResource("5_jix41")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Particles" type="Node2D" parent="."]
+
+[node name="ParticleShower" type="Node2D" parent="Particles"]
+position = Vector2(199, -57)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(1200, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 20.0
+texture = ExtResource("6_sey33")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(1100, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 22.0
+texture = ExtResource("5_no4qx")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(1000, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 20.0
+texture = ExtResource("8_rokex")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(900, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 22.0
+texture = ExtResource("4_rpmrg")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(800, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 20.0
+texture = ExtResource("10_6li6x")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="CPUParticles2D6" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(700, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 22.0
+texture = ExtResource("11_vsf1t")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="CPUParticles2D7" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(600, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 20.0
+texture = ExtResource("3_adijh")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="CPUParticles2D8" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(500, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 22.0
+texture = ExtResource("5_no4qx")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="CPUParticles2D9" type="CPUParticles2D" parent="Particles/ParticleShower"]
+position = Vector2(400, 0)
+amount = 10
+lifetime = 40.0
+preprocess = 20.0
+texture = ExtResource("7_yd47o")
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+angle_min = -90.0
+angle_max = 90.0
+scale_amount_min = 0.05
+scale_amount_max = 0.15
+
+[node name="ParticleQueue" parent="Particles" instance=ExtResource("13_frj8c")]
+particle = ExtResource("14_ly4wi")
+sound = ExtResource("15_jc5xm")
+queue_size = 12
+
+[node name="Rays" parent="." instance=ExtResource("15_oisfi")]
+rotation_big = 15.0
+rotation_medium = -30.0
+rotation_small = 45.0
+
+[node name="Cashew" parent="." instance=ExtResource("1_hov4r")]
+position = Vector2(960, 700)
+scale = Vector2(0.7, 0.7)
+expanding_scale = Vector2(0.9, 0.9)
+
+[connection signal="cashew_clicked" from="Cashew" to="." method="_on_cashew_clicked"]

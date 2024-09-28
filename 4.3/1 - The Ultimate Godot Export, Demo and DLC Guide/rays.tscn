@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://l6upph0nkpyk"]
+
+[ext_resource type="Texture2D" uid="uid://cinmwgnaacjo6" path="res://assets/Rays.png" id="1_1uq36"]
+[ext_resource type="Script" path="res://rays.gd" id="1_ti7k6"]
+
+[node name="Rays" type="Node2D"]
+position = Vector2(960, 699)
+script = ExtResource("1_ti7k6")
+
+[node name="RaysBig" type="Sprite2D" parent="."]
+rotation = 0.918043
+scale = Vector2(0.7, 0.705)
+texture = ExtResource("1_1uq36")
+metadata/_edit_lock_ = true
+
+[node name="RaysMedium" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.504)
+texture = ExtResource("1_1uq36")
+metadata/_edit_lock_ = true
+
+[node name="RaysSmall" type="Sprite2D" parent="."]
+rotation = 0.340339
+scale = Vector2(0.3, 0.303)
+texture = ExtResource("1_1uq36")
+metadata/_edit_lock_ = true
