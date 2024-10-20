@@ -1,0 +1,124 @@
+[gd_scene load_steps=15 format=3 uid="uid://bjj8n6w71b6c0"]
+
+[ext_resource type="Script" path="res://threads.gd" id="1_armsa"]
+[ext_resource type="FontFile" uid="uid://boisi76lignht" path="res://assets/Font/Kenney Future.ttf" id="2_10bi0"]
+[ext_resource type="Texture2D" uid="uid://cbvdpvojlxywd" path="res://assets/PNG/Extra/Double/bar_shadow_round_large.png" id="2_k1obl"]
+[ext_resource type="Script" path="res://simple.gd" id="2_vmfop"]
+[ext_resource type="Texture2D" uid="uid://dk63xos10cstf" path="res://assets/PNG/Red/Double/bar_round_gloss_large.png" id="3_15fui"]
+[ext_resource type="Texture2D" uid="uid://bsuereug0uqxn" path="res://assets/PNG/Extra/Double/button_rectangle.png" id="3_xtfpo"]
+[ext_resource type="Script" path="res://two_threads.gd" id="6_01jj1"]
+[ext_resource type="Script" path="res://movement.gd" id="8_vab1j"]
+[ext_resource type="Texture2D" uid="uid://chu1r1rmuqr20" path="res://icon.svg" id="9_fiovr"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="10_sfqkh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfq20"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4svpg"]
+texture = ExtResource("3_xtfpo")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+modulate_color = Color(0.618616, 0.636199, 0.770635, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5ok6"]
+texture = ExtResource("3_xtfpo")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7xw"]
+size = Vector2(128, 128)
+
+[node name="Threads" type="Node2D"]
+script = ExtResource("1_armsa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(144, 349)
+script = ExtResource("10_sfqkh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -148.0
+offset_right = 211.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_hover_pressed_color = Color(0.18194, 0.197015, 0.296296, 1)
+theme_override_colors/font_hover_color = Color(0.152335, 0.174463, 0.28888, 1)
+theme_override_colors/font_pressed_color = Color(0.283533, 0.306403, 0.450728, 1)
+theme_override_colors/font_focus_color = Color(0.180392, 0.196078, 0.298039, 1)
+theme_override_colors/font_color = Color(0.170324, 0.20554, 0.348439, 1)
+theme_override_fonts/font = ExtResource("2_10bi0")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rfq20")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4svpg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_o5ok6")
+text = "Start Loading"
+
+[node name="Simple" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 20
+alignment = 2
+script = ExtResource("2_vmfop")
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Simple"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_10bi0")
+theme_override_font_sizes/font_size = 36
+text = "SIMPLE"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/VBoxContainer/Simple"]
+layout_mode = 2
+texture_under = ExtResource("2_k1obl")
+texture_progress = ExtResource("3_15fui")
+
+[node name="Two Threads" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 20
+script = ExtResource("6_01jj1")
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Two Threads"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_10bi0")
+theme_override_font_sizes/font_size = 36
+text = "THREADS"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/VBoxContainer/Two Threads"]
+layout_mode = 2
+texture_under = ExtResource("2_k1obl")
+texture_progress = ExtResource("3_15fui")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(572.004, 337.659)
+script = ExtResource("8_vab1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_ry7xw")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("9_fiovr")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Simple" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Two Threads" method="_on_button_pressed"]
