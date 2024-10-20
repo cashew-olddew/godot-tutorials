@@ -8,6 +8,8 @@ This project corresponds to [Master THREADS in Godot 4.3](https://www.youtube.co
 - [Loading a texture with a separate thread](https://github.com/godotengine/godot-demo-projects/blob/3.0-d69cc10/misc/threads/thread.gd)
 ## Notes
 
+Some of the pieces of code have been added to separate scripts for clarity. Additionally, multiple studies of the same code are added as further comments.
+
 In this video I am showcasing the utility of multi threading in Godot 4.3. Threads are extremely useful for when we want to pass methods which are expensive computationally to different other cores of your processor. This leads to having a much smoother experience, helping reduce frame drops and speed up loading times.
 
 On top of that, this video also tackles issues that might occur when working with threads like: race conditions, deadlocks and thread synchronization through rendezvous and barriers applied on both mutexes and semaphores.
