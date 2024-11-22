@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccv3hn8vsfgbw"]
+
+[ext_resource type="Script" path="res://scripts/label_slider.gd" id="1_rf4kn"]
+
+[node name="LabelSlider" type="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+offset_right = 100.0
+offset_bottom = 43.0
+alignment = 1
+script = ExtResource("1_rf4kn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Depth"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 10.0
+
+[connection signal="slider_changed" from="." to="." method="_on_slider_changed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

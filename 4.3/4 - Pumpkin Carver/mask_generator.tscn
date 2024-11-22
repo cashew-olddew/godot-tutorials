@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://lc6te5dda4pt"]
+
+[ext_resource type="Script" path="res://scripts/mask_generator.gd" id="1_gmnko"]
+
+[node name="MaskGenerator" type="Node"]
+script = ExtResource("1_gmnko")
+
+[node name="SubViewport" type="SubViewport" parent="."]

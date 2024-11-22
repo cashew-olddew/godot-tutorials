@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Carving" load_steps=2 format=3 uid="uid://bmudyx7esl756"]
+
+[ext_resource type="Script" path="res://scripts/carving.gd" id="1_ktty6"]
+
+[resource]
+script = ExtResource("1_ktty6")

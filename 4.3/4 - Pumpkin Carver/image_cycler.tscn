@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://beukx80a4ghda"]
+
+[ext_resource type="Script" path="res://image_cycler.gd" id="1_crtf0"]
+
+[node name="ImageCycler" type="Node"]
+script = ExtResource("1_crtf0")
+directory = "res://assets/backgrounds"
+prefix = "bg"

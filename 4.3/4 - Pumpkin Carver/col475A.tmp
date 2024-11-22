@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckfnk4r0npxbp"]
+
+[ext_resource type="Script" path="res://scripts/colors.gd" id="1_kyyrm"]
+
+[node name="PumpkinColors" type="VBoxContainer"]
+script = ExtResource("1_kyyrm")
+
+[node name="ColorsContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorsContainer"]
+layout_mode = 2
+text = "Base Colors:"
+
+[node name="HBoxPicker" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ColorPicker" type="ColorPicker" parent="HBoxPicker"]
+layout_mode = 2
+mouse_filter = 0
+theme_type_variation = &"ColorPickerMinimal"
+alignment = 2
+edit_alpha = false
+picker_shape = 1
+can_add_swatches = false
+color_modes_visible = false
+sliders_visible = false
+presets_visible = false
+
+[node name="ColorApply" type="Button" parent="HBoxPicker"]
+layout_mode = 2
+text = "APPLY"
+
+[connection signal="button_down" from="HBoxPicker/ColorApply" to="." method="_on_color_apply_button_down"]

@@ -1,0 +1,242 @@
+[gd_scene load_steps=19 format=3 uid="uid://c31m50kuan224"]
+
+[ext_resource type="Shader" path="res://shaders/mask.gdshader" id="1_800v6"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_agjvw"]
+[ext_resource type="Texture2D" uid="uid://c7woy6n01ag7w" path="res://assets/backgrounds/bg1.png" id="2_6msbv"]
+[ext_resource type="Texture2D" uid="uid://dyviwyfktx8sm" path="res://assets/Pumpkin.png" id="2_ojsa0"]
+[ext_resource type="PackedScene" uid="uid://beukx80a4ghda" path="res://image_cycler.tscn" id="3_4llih"]
+[ext_resource type="Texture2D" uid="uid://cyrvelbcrryp2" path="res://assets/pumpkin_pulp/pm1.png" id="4_8k5y4"]
+[ext_resource type="Texture2D" uid="uid://dl6gd12ub88s7" path="res://assets/Pumpkin_mid.png" id="4_s5oo3"]
+[ext_resource type="PackedScene" uid="uid://fu11rjeqnxxa" path="res://carver.tscn" id="5_arm6x"]
+[ext_resource type="PackedScene" uid="uid://lc6te5dda4pt" path="res://mask_generator.tscn" id="6_23vy6"]
+[ext_resource type="PackedScene" uid="uid://ftfe0qn6hv3f" path="res://cycler.tscn" id="7_3erck"]
+[ext_resource type="Theme" uid="uid://cwb8dixbe41sw" path="res://assets/themes/halloween.tres" id="7_s8af7"]
+[ext_resource type="PackedScene" uid="uid://bks6nooukhpn7" path="res://colors.tscn" id="9_qjy3u"]
+[ext_resource type="PackedScene" path="res://label_slider.tscn" id="10_1yhqw"]
+[ext_resource type="Script" path="res://canvas_layer.gd" id="10_vhg3o"]
+
+[sub_resource type="Gradient" id="Gradient_gev5t"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o72mb"]
+gradient = SubResource("Gradient_gev5t")
+fill = 1
+fill_from = Vector2(0.518293, 0.506098)
+fill_to = Vector2(0.810976, 0.182927)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h0glb"]
+shader = ExtResource("1_800v6")
+shader_parameter/color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rsmwa"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_agjvw")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+light_mask = 0
+texture = ExtResource("2_6msbv")
+centered = false
+
+[node name="BackgroundCycler" parent="Background" node_paths=PackedStringArray("sprite") instance=ExtResource("3_4llih")]
+sprite = NodePath("../Background")
+
+[node name="Pumpkin" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Back" type="Sprite2D" parent="Pumpkin"]
+modulate = Color(0.315882, 0.184124, 0.0605577, 1)
+position = Vector2(960, 540)
+texture = ExtResource("4_8k5y4")
+
+[node name="Light" type="PointLight2D" parent="Pumpkin"]
+position = Vector2(960, 640)
+scale = Vector2(18.4375, 17.4688)
+energy = 3.67
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_o72mb")
+
+[node name="Middle" type="Sprite2D" parent="Pumpkin"]
+modulate = Color(0.998643, 0.648577, 0.370195, 1)
+light_mask = 2
+material = SubResource("ShaderMaterial_h0glb")
+position = Vector2(960, 540)
+texture = ExtResource("4_s5oo3")
+
+[node name="Front" type="Sprite2D" parent="Pumpkin"]
+light_mask = 2
+material = SubResource("ShaderMaterial_h0glb")
+position = Vector2(960, 540)
+texture = ExtResource("2_ojsa0")
+
+[node name="Cyclers" type="Node" parent="Pumpkin"]
+
+[node name="BackCycler" parent="Pumpkin/Cyclers" node_paths=PackedStringArray("sprite") instance=ExtResource("3_4llih")]
+directory = "res://assets/pumpkin_pulp"
+prefix = "pm"
+sprite = NodePath("../../Back")
+
+[node name="MiddleCycler" parent="Pumpkin/Cyclers" node_paths=PackedStringArray("sprite") instance=ExtResource("3_4llih")]
+directory = "res://assets/pumpkin_pulp"
+prefix = "pm"
+sprite = NodePath("../../Middle")
+
+[node name="FrontCycler" parent="Pumpkin/Cyclers" node_paths=PackedStringArray("sprite") instance=ExtResource("3_4llih")]
+directory = "res://assets/pumpkins"
+prefix = "p"
+sprite = NodePath("../../Front")
+
+[node name="Carver" parent="." instance=ExtResource("5_arm6x")]
+light_mask = 0
+metadata/_edit_lock_ = true
+
+[node name="MaskGenerators" type="Node" parent="."]
+
+[node name="MaskGenerator" parent="MaskGenerators" instance=ExtResource("6_23vy6")]
+
+[node name="DeepMaskGenerator" parent="MaskGenerators" instance=ExtResource("6_23vy6")]
+
+[node name="Overlay" type="Node2D" parent="."]
+
+[node name="Overlay" type="Sprite2D" parent="Overlay"]
+light_mask = 0
+centered = false
+
+[node name="OverlayCycler" parent="Overlay" node_paths=PackedStringArray("sprite") instance=ExtResource("3_4llih")]
+directory = "res://assets/overlays"
+prefix = "o"
+sprite = NodePath("../Overlay")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("10_vhg3o")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 569.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("7_s8af7")
+
+[node name="SettingsColorPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="PanelContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer"]
+layout_mode = 2
+theme_type_variation = &"Title"
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="CyclerPumpkin" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer" instance=ExtResource("7_3erck")]
+layout_mode = 2
+text = "Swap Pumpkin"
+
+[node name="CyclerBg" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer" instance=ExtResource("7_3erck")]
+layout_mode = 2
+text = "Swap Bg"
+
+[node name="CyclerOverlay" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer" instance=ExtResource("7_3erck")]
+layout_mode = 2
+text = "Swap Overlay"
+
+[node name="ButtonSave" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer"]
+layout_mode = 2
+theme_override_constants/align_to_largest_stylebox = 0
+text = "Save Pumpkin"
+
+[node name="ButtonHide" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer"]
+layout_mode = 2
+text = "Hide UI"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rsmwa")
+
+[node name="Restart" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer"]
+layout_mode = 2
+text = "Reset Pumpkin"
+
+[node name="PumpkinColorPanel" type="PanelContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel"]
+layout_mode = 2
+size_flags_horizontal = 10
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 4
+
+[node name="PanelContainer2" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2"]
+layout_mode = 2
+theme_type_variation = &"Title"
+text = "Pumpkin"
+horizontal_alignment = 1
+
+[node name="PumpkinColors" parent="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2" instance=ExtResource("9_qjy3u")]
+layout_mode = 2
+colors_count = 4
+tooltips = ["Outside Color", "Pulp Color", "Light Color (Additive)", "Back Color (Modulate)"]
+
+[node name="PolygonColors" parent="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2" instance=ExtResource("9_qjy3u")]
+layout_mode = 2
+text = "Polygon Colors:"
+colors_count = 2
+tooltips = ["Polygon Color (Transparent)", "Edge Color"]
+
+[node name="LabelSliderDepth" parent="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2" instance=ExtResource("10_1yhqw")]
+layout_mode = 2
+text = "Depth"
+max_value = 200
+
+[node name="LabelSliderLight" parent="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2" instance=ExtResource("10_1yhqw")]
+layout_mode = 2
+text = "Light"
+
+[node name="ButtonShow" type="Button" parent="CanvasLayer"]
+visible = false
+offset_left = 22.0
+offset_top = 21.0
+offset_right = 160.0
+offset_bottom = 57.0
+theme = ExtResource("7_s8af7")
+theme_override_font_sizes/font_size = 24
+text = "Show UI"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+
+[connection signal="finished_carving" from="Carver" to="." method="_on_carver_finished_carving"]
+[connection signal="left_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/CyclerPumpkin" to="." method="_on_cycler_pumpkin_left_down"]
+[connection signal="right_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/CyclerPumpkin" to="." method="_on_cycler_pumpkin_right_down"]
+[connection signal="left_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/CyclerBg" to="." method="_on_cycler_bg_left_down"]
+[connection signal="right_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/CyclerBg" to="." method="_on_cycler_bg_right_down"]
+[connection signal="left_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/CyclerOverlay" to="." method="_on_cycler_overlay_left_down"]
+[connection signal="right_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/CyclerOverlay" to="." method="_on_cycler_overlay_right_down"]
+[connection signal="button_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/ButtonSave" to="." method="_on_button_save_button_down"]
+[connection signal="button_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/ButtonHide" to="CanvasLayer" method="_on_button_hide_button_down"]
+[connection signal="button_down" from="CanvasLayer/MarginContainer/HBoxContainer/SettingsColorPanel/PanelContainer/Restart" to="." method="_on_restart_button_down"]
+[connection signal="color_changed" from="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2/PumpkinColors" to="." method="_on_pumpkin_colors_color_changed"]
+[connection signal="color_changed" from="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2/PolygonColors" to="." method="_on_polygon_colors_color_changed"]
+[connection signal="slider_changed" from="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2/LabelSliderDepth" to="." method="_on_label_slider_depth_slider_changed"]
+[connection signal="slider_changed" from="CanvasLayer/MarginContainer/HBoxContainer/PumpkinColorPanel/ScrollContainer/MarginContainer/PanelContainer2/LabelSliderLight" to="." method="_on_label_slider_light_slider_changed"]
+[connection signal="button_down" from="CanvasLayer/ButtonShow" to="CanvasLayer" method="_on_button_show_button_down"]

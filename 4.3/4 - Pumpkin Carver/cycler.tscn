@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://ftfe0qn6hv3f"]
+
+[ext_resource type="Theme" uid="uid://cwb8dixbe41sw" path="res://assets/themes/halloween.tres" id="1_otxwp"]
+[ext_resource type="Script" path="res://scripts/cycler.gd" id="2_tmfx0"]
+[ext_resource type="Texture2D" uid="uid://brndi7nj6hiiv" path="res://assets/left.png" id="3_bxtbc"]
+[ext_resource type="Texture2D" uid="uid://b8p0knqw8v0ka" path="res://assets/right.png" id="4_sn2nq"]
+
+[node name="Cycler" type="HBoxContainer"]
+offset_right = 255.0
+offset_bottom = 30.0
+theme = ExtResource("1_otxwp")
+script = ExtResource("2_tmfx0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Swap"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 10
+alignment = 1
+
+[node name="ButtonLeft" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_otxwp")
+icon = ExtResource("3_bxtbc")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ButtonRight" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_otxwp")
+icon = ExtResource("4_sn2nq")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="button_down" from="HBoxContainer/ButtonLeft" to="." method="_on_button_left_button_down"]
+[connection signal="button_down" from="HBoxContainer/ButtonRight" to="." method="_on_button_right_button_down"]

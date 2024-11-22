@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://fu11rjeqnxxa"]
+
+[ext_resource type="Script" path="res://scripts/carver.gd" id="1_2ijb1"]
+
+[node name="Carver" type="Node2D"]
+script = ExtResource("1_2ijb1")
+
+[node name="Polygons" type="Node2D" parent="."]
+show_behind_parent = true
+
+[node name="Handles" type="Node2D" parent="."]

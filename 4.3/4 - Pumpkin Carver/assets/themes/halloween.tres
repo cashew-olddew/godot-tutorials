@@ -1,0 +1,120 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://cwb8dixbe41sw"]
+
+[ext_resource type="FontFile" uid="uid://ch0ptrhh7tcxc" path="res://assets/MISTV___.TTF" id="1_time2"]
+[ext_resource type="Texture2D" uid="uid://vaf4fgibavqn" path="res://assets/panels/paper_panel_360_x_392.png" id="2_44prh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oik68"]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.297156, 0.277123, 0.237087, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gb84t"]
+bg_color = Color(0.298039, 0.278431, 0.235294, 1)
+border_width_left = 2
+border_width_right = 2
+border_color = Color(0.682353, 0.639216, 0.509804, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4giw0"]
+bg_color = Color(0.427451, 0.411765, 0.360784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kl2su"]
+bg_color = Color(0.298039, 0.278431, 0.235294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwp1n"]
+content_margin_left = 10.0
+bg_color = Color(0.682353, 0.639216, 0.509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.261075, 0.147593, 0.14754, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1il6f"]
+texture = ExtResource("2_44prh")
+texture_margin_left = 30.0
+texture_margin_top = 25.0
+texture_margin_right = 30.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8fbch"]
+texture = ExtResource("2_44prh")
+texture_margin_left = 100.0
+texture_margin_top = 30.0
+texture_margin_right = 100.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elsqm"]
+bg_color = Color(0.298039, 0.278431, 0.235294, 1)
+border_width_left = 2
+border_width_right = 2
+border_color = Color(0.682353, 0.639216, 0.509804, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3yr5"]
+bg_color = Color(0.242131, 0.225413, 0.188633, 1)
+border_width_left = 2
+border_width_right = 2
+border_color = Color(0.682353, 0.639216, 0.509804, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l30a"]
+bg_color = Color(0.112591, 0.102996, 0.0818849, 1)
+border_width_left = 2
+border_width_right = 2
+border_color = Color(0.682353, 0.639216, 0.509804, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[resource]
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_time2")
+Button/styles/normal = SubResource("StyleBoxFlat_oik68")
+ColorPicker/constants/margin = 0
+ColorPickerMinimal/base_type = &"ColorPicker"
+HScrollBar/styles/grabber = SubResource("StyleBoxFlat_gb84t")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_4giw0")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_kl2su")
+Label/colors/font_color = Color(0.211765, 0.141176, 0.0156863, 1)
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_time2")
+LineEdit/colors/caret_color = Color(0.89, 0.5073, 0.1246, 1)
+LineEdit/colors/font_color = Color(0.206435, 0.166472, 0.0863961, 1)
+LineEdit/colors/selection_color = Color(0.403561, 0.37002, 0.26947, 1)
+LineEdit/font_sizes/font_size = 26
+LineEdit/fonts/font = ExtResource("1_time2")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_kwp1n")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_1il6f")
+Title/base_type = &"Label"
+Title/colors/font_color = Color(0.501667, 0.326914, 0.021854, 1)
+Title/font_sizes/font_size = 36
+TooltipPanel/styles/panel = SubResource("StyleBoxTexture_8fbch")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_elsqm")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_b3yr5")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_7l30a")
