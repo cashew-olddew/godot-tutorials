@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://utpred8ektch"]
+
+[ext_resource type="Script" path="res://scripts/polygon_visualizer.gd" id="1_raqxi"]
+
+[node name="PolygonVisualizer" type="Node2D"]
+script = ExtResource("1_raqxi")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_right = 274.0
+offset_bottom = 104.0
+max_value = 1000.0
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
