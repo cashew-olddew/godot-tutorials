@@ -3,7 +3,7 @@ extends Node
 @onready var sub_viewport: SubViewport = $SubViewport
 
 func _ready():
-	var _image_size = get_viewport().size
+	var _image_size = get_viewport().get_visible_rect().size
 	
 	sub_viewport.size = _image_size
 	sub_viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ALWAYS

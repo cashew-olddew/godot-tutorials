@@ -24,7 +24,7 @@ func _ready():
 	for i in range(colors_count):
 		var color_rect: ColorRect = init_color_rect(i)
 		colors_container.add_child(color_rect)
-		if tooltips and tooltips[i]:
+		if tooltips[i]:
 			color_rect.tooltip_text = tooltips[i]
 		colors[i] = color_rect
 

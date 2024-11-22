@@ -30,11 +30,7 @@ func get_deep_perspective(polygon: Polygon2D, scale_factor := 20) -> Polygon2D:
 	var deep_carve: Polygon2D = Polygon2D.new()
 	deep_carve.set_polygon(polygon.polygon)
 
-	var viewport_size = get_viewport().size
 	var visible_rect_size = get_viewport().get_visible_rect().size
-	
-	print(get_viewport().size)
-	print(get_viewport().get_visible_rect().size)
 	
 	var screen_center: Vector2 = visible_rect_size / 2
 	var polygon_center: Vector2 = Utils.get_polygon_center(deep_carve)
