@@ -1,5 +1,5 @@
 shader_type canvas_item;
- 
+
 uniform vec4 border_color : source_color;
 uniform float border_percentage : hint_range(0.0, 0.5, 0.001);
 uniform vec2 sprite_size; // Set this to the size of the sprite (width, height)
