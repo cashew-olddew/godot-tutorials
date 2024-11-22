@@ -16,4 +16,15 @@ This project corresponds to [Making this Halloween game taught me so much about 
 
 I really hope you'll like this, as I put a lot of effort into it. 🥜 If this is well received, I will make sure to make more of these, as I had an amazing time doing it.
 
+# Credits
 Play the game: https://olddews.itch.io/cashews-pumpkin-carver
+
+[Gamedeveloperstudio's paper panels](https://gamedeveloperstudio.itch.io/paper-panels)
+All the assets that are not specially mentioned are Adobe assets which follow the extended license:
+
+With an Extended license, one may:
+
+Reproduce copies of the asset in product packaging, printed marketing materials, digital documents, or software.
+Include the asset in email marketing, mobile advertising, or a broadcast program.
+Post the asset to a website. If the asset is posted unmodified to a social media site, attribution is required (© Author Name - stock.adobe.com).
+Create merchandise or products for resale or distribution where the main value of the product is associated with the asset itself, such as a coffee mug or t-shirt.
