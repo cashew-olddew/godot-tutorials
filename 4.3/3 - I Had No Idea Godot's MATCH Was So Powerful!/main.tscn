@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxvwshwcuw7yc"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_3hs2m"]
+[ext_resource type="PackedScene" uid="uid://daeft6xish3j1" path="res://slot.tscn" id="2_buc4i"]
+[ext_resource type="Texture2D" uid="uid://crvhwkj6ftfr" path="res://assets/food/vegetable/potato.png" id="3_if6p8"]
+[ext_resource type="Texture2D" uid="uid://c8ql2myvpfsnb" path="res://assets/Arrow.png" id="3_o8e6i"]
+[ext_resource type="Texture2D" uid="uid://dls1y6q37g5iu" path="res://assets/food/vegetable/broccoli.png" id="4_dxj8l"]
+
+[sub_resource type="SystemFont" id="SystemFont_loh0x"]
+font_names = PackedStringArray("Perpetua")
+font_italic = true
+font_weight = 999
+hinting = 2
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_3hs2m")
+
+[node name="Ingredients" type="Node2D" parent="."]
+
+[node name="Slot" parent="Ingredients" instance=ExtResource("2_buc4i")]
+position = Vector2(351, 214)
+ingredient = ExtResource("3_if6p8")
+
+[node name="Slot2" parent="Ingredients" instance=ExtResource("2_buc4i")]
+position = Vector2(501, 214)
+ingredient = ExtResource("3_if6p8")
+
+[node name="Slot3" parent="Ingredients" instance=ExtResource("2_buc4i")]
+position = Vector2(651, 214)
+ingredient = ExtResource("3_if6p8")
+
+[node name="Slot4" parent="Ingredients" instance=ExtResource("2_buc4i")]
+position = Vector2(801, 214)
+ingredient = ExtResource("4_dxj8l")
+
+[node name="Result" parent="." instance=ExtResource("2_buc4i")]
+position = Vector2(576, 525)
+
+[node name="Arrow" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(575, 370)
+scale = Vector2(1.40541, 1.40541)
+texture = ExtResource("3_o8e6i")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 483.0
+offset_top = 31.0
+offset_right = 669.0
+offset_bottom = 110.0
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_loh0x")
+theme_override_font_sizes/font_size = 61
+text = "Craft"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = 168.0
+offset_top = 350.0
+offset_right = 354.0
+offset_bottom = 429.0
+size_flags_horizontal = 4
+theme_override_fonts/font = SubResource("SystemFont_loh0x")
+theme_override_font_sizes/font_size = 61
+text = "Insane"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
