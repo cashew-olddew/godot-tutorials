@@ -1,0 +1,26 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="cursor-2"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://assets/Outline/cursor_none.svg"
+mouse_cursor/custom_image_hotspot=Vector2(8, 4)
+
+[physics]
+
+common/physics_ticks_per_second=240

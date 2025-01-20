@@ -1,0 +1,18 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="-819.2" x2="819.2" spreadMethod="pad" gradientTransform="matrix(0 -0.0181884765625 0.007476806640625 0 15.95 22.9)" id="gradient0">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#CCCCCC"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="-819.2" x2="819.2" spreadMethod="pad" gradientTransform="matrix(0.003173828125 0 0 0.00244140625 11.25 7.15)" id="gradient1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#CCCCCC"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path stroke="none" fill="#000000" d="M25 25 Q25 27.5 23.95 29 22.5 31 19 31 L12.6 31 12.5 31 Q9.45 30.85 8.1 29.05 7 27.55 7 25 L7 15.7 Q6 14.55 6 13 6 11.5 6.95 10.45 6 9.7 6 8 L6 6 Q6 3 9 3 L10.35 3 Q11.15 1 14 1 L18 1 Q22 1 22 5 L22 7.3 24.9 10.2 Q26 11.3 26 13 26 14.6 25 15.75 L25 25 M11.2 9 L8.6 11.6 Q8 12.15 8 13 8 13.85 8.6 14.45 L9 14.75 10 15 22 15 23 14.8 23.45 14.45 Q24 13.85 24 13 24 12.15 23.45 11.6 L20 8.15 20 5 Q20 3 18 3 L14 3 Q12 3 12 5 L9 5 Q8 5 8 6 L8 8 Q8 9 9 9 L11.2 9 M23 25 L23 17 23 16.8 22 17 10 17 9 16.75 9 17 9 25 Q9 28.8 12.6 29 L19 29 Q23 29 23 25"/>
+    <path stroke="none" fill="url(#gradient0)" d="M23 25 Q23 29 19 29 L12.6 29 Q9 28.8 9 25 L9 17 9 16.75 10 17 22 17 23 16.8 23 17 23 25"/>
+    <path stroke="none" fill="#FFFFFF" d="M12 5 Q12 3 14 3 L18 3 Q20 3 20 5 L20 8.15 23.45 11.6 Q24 12.15 24 13 24 13.85 23.45 14.45 L23 14.8 22 15 10 15 9 14.75 8.6 14.45 Q8 13.85 8 13 8 12.15 8.6 11.6 L11.2 9 12 8.2 12 5"/>
+    <path stroke="none" fill="url(#gradient1)" d="M12 5 L12 8.2 11.2 9 9 9 Q8 9 8 8 L8 6 Q8 5 9 5 L12 5"/>
+  </g>
+</svg>
