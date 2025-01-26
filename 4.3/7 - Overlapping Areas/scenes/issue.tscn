@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://btt6dgtffvytf"]
+
+[ext_resource type="Texture2D" uid="uid://qu5sjmtnaoo0" path="res://assets/red_1.png" id="2_76l35"]
+[ext_resource type="Texture2D" uid="uid://ci4j3822dugg0" path="res://assets/special_red.png" id="3_gha7m"]
+[ext_resource type="Texture2D" uid="uid://cll8hcvv813ha" path="res://assets/black_1.png" id="5_p22yy"]
+[ext_resource type="Texture2D" uid="uid://b33xk37lnni0g" path="res://assets/special_black.png" id="6_jb6py"]
+[ext_resource type="PackedScene" uid="uid://c2b2d7b6l4mb3" path="res://scenes/card_physics_point.tscn" id="7_g2vo1"]
+
+[node name="Issue" type="Node2D"]
+
+[node name="CardPhysicsPoint" parent="." instance=ExtResource("7_g2vo1")]
+position = Vector2(546, 256)
+back_texture = ExtResource("5_p22yy")
+face_texture = ExtResource("6_jb6py")
+
+[node name="CardPhysicsPoint2" parent="." instance=ExtResource("7_g2vo1")]
+z_index = 1
+position = Vector2(1193, 623)
+back_texture = ExtResource("2_76l35")
+face_texture = ExtResource("3_gha7m")

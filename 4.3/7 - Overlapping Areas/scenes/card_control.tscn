@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb8s4b45gxij2"]
+
+[ext_resource type="Script" path="res://scenes/card_control.gd" id="1_8gsqp"]
+[ext_resource type="Texture2D" uid="uid://cll8hcvv813ha" path="res://assets/black_1.png" id="2_6r81e"]
+[ext_resource type="Texture2D" uid="uid://b33xk37lnni0g" path="res://assets/special_black.png" id="3_j81os"]
+
+[node name="Card" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8gsqp")
+
+[node name="Back" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -300.0
+offset_right = 450.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6r81e")
+
+[node name="Face" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -300.0
+offset_right = 450.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_j81os")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

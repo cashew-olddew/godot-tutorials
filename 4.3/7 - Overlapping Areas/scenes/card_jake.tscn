@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ic04qgfsgnwe"]
+
+[ext_resource type="Texture2D" uid="uid://cll8hcvv813ha" path="res://assets/black_1.png" id="1_megu5"]
+[ext_resource type="Texture2D" uid="uid://b33xk37lnni0g" path="res://assets/special_black.png" id="2_wcsai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tkf1"]
+size = Vector2(860, 538)
+
+[node name="CardJake" type="Area2D"]
+
+[node name="Back" type="Sprite2D" parent="."]
+texture = ExtResource("1_megu5")
+
+[node name="Face" type="Sprite2D" parent="."]
+texture = ExtResource("2_wcsai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8tkf1")
