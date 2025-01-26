@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://1iakuecbhovk"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_elt32"]
+[ext_resource type="Texture2D" uid="uid://dumj1k3ft3448" path="res://assets/background.png" id="2_doej6"]
+[ext_resource type="Texture2D" uid="uid://cdn1yt8bg8pmv" path="res://assets/tree.png" id="3_i0oub"]
+[ext_resource type="Script" path="res://christmas_tree.gd" id="4_8rngh"]
+[ext_resource type="Script" path="res://tree_tip.gd" id="5_gqjx4"]
+[ext_resource type="Script" path="res://ginger_bread.gd" id="6_31odx"]
+[ext_resource type="PackedScene" uid="uid://cbxpau530p2fp" path="res://scenes/drawer.tscn" id="7_yy1u3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_elt32")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(577.889, 321.5)
+scale = Vector2(0.600926, 0.600926)
+texture = ExtResource("2_doej6")
+
+[node name="Tree" type="Node2D" parent="."]
+position = Vector2(235, 580)
+
+[node name="TreeSprite" type="Sprite2D" parent="Tree"]
+position = Vector2(15, -243)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_i0oub")
+
+[node name="ChristmasTree" type="Area2D" parent="Tree"]
+position = Vector2(-235, -580)
+collision_layer = 2
+script = ExtResource("4_8rngh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tree/ChristmasTree"]
+position = Vector2(250, 337)
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(-27.7, -470.4, -44, -467.3, -44, -459.2, -60, -393.2, -108.5, -353, -116.4, -353, -115.3, -321.5, -142, -310, -151.9, -310, -148.2, -265.5, -203.9, -231, -210.9, -231, -213, -213.3, -164.9, -201.9, -164.6, -199.7, -244.2, -180, -257.7, -180, -245, -140.5, -245, -125.9, -201.3, -144.5, -200.5, -144.1, -262, -103.4, -262, -87.2, -204.4, -79.9, -239.2, -36.9, -276.9, -14, -285.3, -14, -284.7, 6.59998, -252.8, 4.59998, -256, 13.2, -256, 19.2, -247.2, 31.7, -315.1, 61, -323.3, 61, -324.7, 79.5, -252.7, 90.4, -273.8, 113.5, -321.6, 128, -328.9, 128, -332.6, 143.4, -289.6, 164.9, -314.9, 198, -317.5, 198, -322.8, 210, -311.5, 222.1, -331, 233.2, -331, 240.3, -328, 283.7, -328, 300.5, -290, 283.2, -283.8, 305.4, -338, 357, -343.8, 357, -349, 397.4, -349, 409.6, -292.2, 417.9, -284, 429.2, -284, 438.4, -236.6, 432.1, -218, 454.6, -218, 463.8, -47.4, 435, 21.9, 455.8, 26, 463.4, 26, 476.5, 154.9, 427.2, 257.8, 432, 260.6, 432, 318.6, 413, 328.9, 413, 326, 378.2, 326, 372.9, 258.9, 304.8, 263, 284, 263, 283.2, 289, 258.3, 289, 246.3, 250.4, 223.7, 272.6, 217, 280.4, 217, 288, 192.5, 288, 180.6, 250.9, 174, 250.2, 174, 241.8, 165.3, 257.5, 167, 265.4, 167, 289, 148.9, 289, 136, 193.7, 85.3, 193.2, 74.7, 213, 69.8, 213, 56.9, 180.9, 24.8, 205, 10.7, 205, 0.5, 216, -14.8, 216, -25.7, 99.7, -121.9, 103.4, -147.8, 140.8, -139, 149, -139, 157, -154, 159.4, -154, 163.7, -168.1, 92.6, -216.2, 132, -241.6, 132, -254, 54.2, -295, 66, -320.8, 66, -329.2, 32.6, -352.8, 37, -368.7, 37, -379.6, 6.10001, -384.2)
+
+[node name="Content" type="Node2D" parent="Tree/ChristmasTree"]
+
+[node name="TreeTip" type="Area2D" parent="Tree"]
+collision_layer = 4
+script = ExtResource("5_gqjx4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tree/TreeTip"]
+position = Vector2(14, -243)
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(-27.7, -470.4, -44, -467.3, -44, -459.2, -60, -393.2, -108.5, -353, -116.4, -353, -115.3, -321.5, -142, -310, -151.9, -310, -148.2, -265.5, -203.9, -231, -210.9, -231, -213, -213.3, -164.9, -201.9, -164.6, -199.7, -244.2, -180, -257.7, -180, -245, -140.5, -245, -125.9, -201.3, -144.5, -200.5, -144.1, -262, -103.4, -262, -87.2, -204.4, -79.9, -239.2, -36.9, -276.9, -14, -285.3, -14, -284.7, 6.59998, -252.8, 4.59998, -256, 13.2, -256, 19.2, -247.2, 31.7, -315.1, 61, -323.3, 61, -324.7, 79.5, -252.7, 90.4, -273.8, 113.5, -321.6, 128, -328.9, 128, -332.6, 143.4, -289.6, 164.9, -314.9, 198, -317.5, 198, -322.8, 210, -311.5, 222.1, -331, 233.2, -331, 240.3, -328, 283.7, -328, 300.5, -290, 283.2, -283.8, 305.4, -338, 357, -343.8, 357, -349, 397.4, -349, 409.6, -292.2, 417.9, -284, 429.2, -284, 438.4, -236.6, 432.1, -218, 454.6, -218, 463.8, -47.4, 435, 21.9, 455.8, 26, 463.4, 26, 476.5, 154.9, 427.2, 257.8, 432, 260.6, 432, 318.6, 413, 328.9, 413, 326, 378.2, 326, 372.9, 258.9, 304.8, 263, 284, 263, 283.2, 289, 258.3, 289, 246.3, 250.4, 223.7, 272.6, 217, 280.4, 217, 288, 192.5, 288, 180.6, 250.9, 174, 250.2, 174, 241.8, 165.3, 257.5, 167, 265.4, 167, 289, 148.9, 289, 136, 193.7, 85.3, 193.2, 74.7, 213, 69.8, 213, 56.9, 180.9, 24.8, 205, 10.7, 205, 0.5, 216, -14.8, 216, -25.7, 99.7, -121.9, 103.4, -147.8, 140.8, -139, 149, -139, 157, -154, 159.4, -154, 163.7, -168.1, 92.6, -216.2, 132, -241.6, 132, -254, 54.2, -295, 66, -320.8, 66, -329.2, 32.6, -352.8, 37, -368.7, 37, -379.6, 6.10001, -384.2)
+
+[node name="Marker2D" type="Marker2D" parent="Tree/TreeTip"]
+position = Vector2(-3, -515)
+gizmo_extents = 54.1
+
+[node name="Content" type="Node2D" parent="Tree/TreeTip"]
+
+[node name="GingerBread" type="Area2D" parent="Tree"]
+collision_layer = 8
+script = ExtResource("6_31odx")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Tree/GingerBread"]
+position = Vector2(14, -243)
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(-27.7, -470.4, -44, -467.3, -44, -459.2, -60, -393.2, -108.5, -353, -116.4, -353, -115.3, -321.5, -142, -310, -151.9, -310, -148.2, -265.5, -203.9, -231, -210.9, -231, -213, -213.3, -164.9, -201.9, -164.6, -199.7, -244.2, -180, -257.7, -180, -245, -140.5, -245, -125.9, -201.3, -144.5, -200.5, -144.1, -262, -103.4, -262, -87.2, -204.4, -79.9, -239.2, -36.9, -276.9, -14, -285.3, -14, -284.7, 6.59998, -252.8, 4.59998, -256, 13.2, -256, 19.2, -247.2, 31.7, -315.1, 61, -323.3, 61, -324.7, 79.5, -252.7, 90.4, -273.8, 113.5, -321.6, 128, -328.9, 128, -332.6, 143.4, -289.6, 164.9, -314.9, 198, -317.5, 198, -322.8, 210, -311.5, 222.1, -331, 233.2, -331, 240.3, -328, 283.7, -328, 300.5, -290, 283.2, -283.8, 305.4, -338, 357, -343.8, 357, -349, 397.4, -349, 409.6, -292.2, 417.9, -284, 429.2, -284, 438.4, -236.6, 432.1, -218, 454.6, -218, 463.8, -47.4, 435, 21.9, 455.8, 26, 463.4, 26, 476.5, 154.9, 427.2, 257.8, 432, 260.6, 432, 318.6, 413, 328.9, 413, 326, 378.2, 326, 372.9, 258.9, 304.8, 263, 284, 263, 283.2, 289, 258.3, 289, 246.3, 250.4, 223.7, 272.6, 217, 280.4, 217, 288, 192.5, 288, 180.6, 250.9, 174, 250.2, 174, 241.8, 165.3, 257.5, 167, 265.4, 167, 289, 148.9, 289, 136, 193.7, 85.3, 193.2, 74.7, 213, 69.8, 213, 56.9, 180.9, 24.8, 205, 10.7, 205, 0.5, 216, -14.8, 216, -25.7, 99.7, -121.9, 103.4, -147.8, 140.8, -139, 149, -139, 157, -154, 159.4, -154, 163.7, -168.1, 92.6, -216.2, 132, -241.6, 132, -254, 54.2, -295, 66, -320.8, 66, -329.2, 32.6, -352.8, 37, -368.7, 37, -379.6, 6.10001, -384.2)
+
+[node name="Markers" type="Node2D" parent="Tree/GingerBread"]
+
+[node name="Marker2D" type="Marker2D" parent="Tree/GingerBread/Markers"]
+position = Vector2(-120, -200)
+
+[node name="Marker2D2" type="Marker2D" parent="Tree/GingerBread/Markers"]
+position = Vector2(-60, -200)
+
+[node name="Marker2D3" type="Marker2D" parent="Tree/GingerBread/Markers"]
+position = Vector2(0, -200)
+
+[node name="Marker2D4" type="Marker2D" parent="Tree/GingerBread/Markers"]
+position = Vector2(60, -200)
+
+[node name="Marker2D5" type="Marker2D" parent="Tree/GingerBread/Markers"]
+position = Vector2(120, -198)
+
+[node name="Content" type="Node2D" parent="Tree/GingerBread"]
+
+[node name="Drawers" type="Node2D" parent="."]
+
+[node name="Drawer1" parent="Drawers" instance=ExtResource("7_yy1u3")]
+position = Vector2(1479, 113)
+left_limit = 420
+decoration_sprite_folder = "res://assets/baubles"
+decoration_count = 9
+decoration_scale = Vector2(0.4, 0.4)
+separation = 75
+
+[node name="Drawer2" parent="Drawers" instance=ExtResource("7_yy1u3")]
+position = Vector2(2090, 322)
+left_limit = 420
+decoration_sprite_folder = "res://assets/stars"
+decoration_scale = Vector2(0.5, 0.5)
+decoration_collisions = 4
+separation = 110
+
+[node name="Drawer3" parent="Drawers" instance=ExtResource("7_yy1u3")]
+position = Vector2(2090, 528)
+left_limit = 420
+decoration_sprite_folder = "res://assets/gignerbread"
+decoration_count = 5
+decoration_scale = Vector2(0.8, 0.8)
+decoration_collisions = 8
+separation = 140
+
+[connection signal="area_entered" from="Tree/ChristmasTree" to="Tree/ChristmasTree" method="_on_area_entered"]
+[connection signal="area_exited" from="Tree/ChristmasTree" to="Tree/ChristmasTree" method="_on_area_exited"]
