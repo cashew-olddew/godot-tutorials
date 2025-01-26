@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://2fq5afmlxcjg"]
+
+[ext_resource type="Script" path="res://content_manager.gd" id="1_vok2b"]
+
+[node name="Content" type="Node2D"]
+position = Vector2(-885, 0)
+script = ExtResource("1_vok2b")
+decoration_count = 6

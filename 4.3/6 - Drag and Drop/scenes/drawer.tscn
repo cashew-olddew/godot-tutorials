@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbxpau530p2fp"]
+
+[ext_resource type="Texture2D" uid="uid://crjqv7uh1p67o" path="res://Drawer.png" id="1_3ax1m"]
+[ext_resource type="Script" path="res://drawer.gd" id="1_kel6r"]
+[ext_resource type="PackedScene" uid="uid://2fq5afmlxcjg" path="res://scenes/content_manager.tscn" id="3_e4n5l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmjoo"]
+radius = 14.0
+
+[node name="Drawer" type="Area2D"]
+position = Vector2(-1001, 0)
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource("1_kel6r")
+left_limit = 400
+right_limit = 1090
+
+[node name="Handle" type="CollisionShape2D" parent="."]
+position = Vector2(36, -1)
+shape = SubResource("CircleShape2D_wmjoo")
+debug_color = Color(0.876382, 0.222442, 0.653944, 0.42)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(501, 1)
+texture = ExtResource("1_3ax1m")
+
+[node name="Content" parent="." instance=ExtResource("3_e4n5l")]
+position = Vector2(116.4, 0)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
