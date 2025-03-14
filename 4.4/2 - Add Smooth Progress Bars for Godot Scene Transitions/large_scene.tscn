@@ -1,0 +1,456 @@
+[gd_scene load_steps=91 format=3 uid="uid://c44llk0r1wmw0"]
+
+[ext_resource type="Texture2D" uid="uid://yi7h8heob41n" path="res://assets/Thick outline/tile_0000.png" id="1_hri0j"]
+[ext_resource type="Texture2D" uid="uid://csso27437w2vl" path="res://assets/Thick outline/tile_0001.png" id="2_i04jh"]
+[ext_resource type="Texture2D" uid="uid://crvc6i8ys8v1i" path="res://assets/Thick outline/tile_0002.png" id="3_uj60w"]
+[ext_resource type="Texture2D" uid="uid://d15wf6tbdqevf" path="res://assets/Thick outline/tile_0003.png" id="4_n5too"]
+[ext_resource type="Texture2D" uid="uid://crpmcjtribxkp" path="res://assets/Thick outline/tile_0004.png" id="5_hodlh"]
+[ext_resource type="Texture2D" uid="uid://5vvrxjmr7slm" path="res://assets/Thick outline/tile_0005.png" id="6_ubnfw"]
+[ext_resource type="Texture2D" uid="uid://corunvv5ocjn8" path="res://assets/Thick outline/tile_0006.png" id="7_jqrm6"]
+[ext_resource type="Texture2D" uid="uid://qjaphbqxf0ms" path="res://assets/Thick outline/tile_0007.png" id="8_slbao"]
+[ext_resource type="Texture2D" uid="uid://d0b4vduhvo1di" path="res://assets/Thick outline/tile_0008.png" id="9_j1vhp"]
+[ext_resource type="Texture2D" uid="uid://d0khup0lx8uk" path="res://assets/Thick outline/tile_0009.png" id="10_qcqme"]
+[ext_resource type="Texture2D" uid="uid://bjve3gvihdgob" path="res://assets/Thick outline/tile_0010.png" id="11_1ir83"]
+[ext_resource type="Texture2D" uid="uid://baj1w41g15pmv" path="res://assets/Thick outline/tile_0011.png" id="12_oevwy"]
+[ext_resource type="Texture2D" uid="uid://cmlpgixvq0kjl" path="res://assets/Thick outline/tile_0012.png" id="13_xnaqc"]
+[ext_resource type="Texture2D" uid="uid://ddv7rt8rxatpv" path="res://assets/Thick outline/tile_0013.png" id="14_gfj7a"]
+[ext_resource type="Texture2D" uid="uid://b0fcevjvf31v2" path="res://assets/Thick outline/tile_0014.png" id="15_u3ub6"]
+[ext_resource type="Texture2D" uid="uid://kfyx8sl18l2l" path="res://assets/Thick outline/tile_0015.png" id="16_stg1g"]
+[ext_resource type="Texture2D" uid="uid://cxinttfbknla0" path="res://assets/Thick outline/tile_0016.png" id="17_p0nqu"]
+[ext_resource type="Texture2D" uid="uid://c0quhfvunssmu" path="res://assets/Thick outline/tile_0017.png" id="18_3qypr"]
+[ext_resource type="Texture2D" uid="uid://4krhng5etij1" path="res://assets/Thick outline/tile_0018.png" id="19_qptll"]
+[ext_resource type="Texture2D" uid="uid://do7jkir13c40b" path="res://assets/Thick outline/tile_0019.png" id="20_qwuwp"]
+[ext_resource type="Texture2D" uid="uid://balvgsftip51s" path="res://assets/Thick outline/tile_0020.png" id="21_v1bga"]
+[ext_resource type="Texture2D" uid="uid://bqiqh0e8h334j" path="res://assets/Thick outline/tile_0021.png" id="22_ujgv4"]
+[ext_resource type="Texture2D" uid="uid://7r1b68yccju4" path="res://assets/Thick outline/tile_0022.png" id="23_2hgch"]
+[ext_resource type="Texture2D" uid="uid://bvlcxx1kwe3y8" path="res://assets/Thick outline/tile_0023.png" id="24_r7x4w"]
+[ext_resource type="Texture2D" uid="uid://u4sdkhewqvbg" path="res://assets/Thick outline/tile_0024.png" id="25_tv8bh"]
+[ext_resource type="Texture2D" uid="uid://8hea4ix30nbf" path="res://assets/Thick outline/tile_0025.png" id="26_07u36"]
+[ext_resource type="Texture2D" uid="uid://biqrox8kojjpw" path="res://assets/Thick outline/tile_0026.png" id="27_phtah"]
+[ext_resource type="Texture2D" uid="uid://h7mc4lf4r5tq" path="res://assets/Thick outline/tile_0027.png" id="28_180qq"]
+[ext_resource type="Texture2D" uid="uid://51yjk0v5r50o" path="res://assets/Thick outline/tile_0028.png" id="29_ekevt"]
+[ext_resource type="Texture2D" uid="uid://c45quv5xqcm2k" path="res://assets/Thick outline/tile_0029.png" id="30_k0kat"]
+[ext_resource type="Texture2D" uid="uid://b2dy8lmpg7fxn" path="res://assets/Thick outline/tile_0030.png" id="31_hsp08"]
+[ext_resource type="Texture2D" uid="uid://cakgbx34u07uf" path="res://assets/Thick outline/tile_0031.png" id="32_lw03m"]
+[ext_resource type="Texture2D" uid="uid://rns7ug5to3lb" path="res://assets/Thick outline/tile_0032.png" id="33_i6326"]
+[ext_resource type="Texture2D" uid="uid://dwuwg62uach1n" path="res://assets/Thick outline/tile_0033.png" id="34_bmieu"]
+[ext_resource type="Texture2D" uid="uid://du0s0og17rc3f" path="res://assets/Thick outline/tile_0034.png" id="35_bm55c"]
+[ext_resource type="Texture2D" uid="uid://f70xugecesui" path="res://assets/Thick outline/tile_0035.png" id="36_w3ck2"]
+[ext_resource type="Texture2D" uid="uid://crph25jvug62p" path="res://assets/Thick outline/tile_0036.png" id="37_1v5nb"]
+[ext_resource type="Texture2D" uid="uid://b65kcmsdu6al5" path="res://assets/Thick outline/tile_0037.png" id="38_uppoh"]
+[ext_resource type="Texture2D" uid="uid://l36plcutav4j" path="res://assets/Thick outline/tile_0038.png" id="39_vihgv"]
+[ext_resource type="Texture2D" uid="uid://cdjet8p3babgs" path="res://assets/Thick outline/tile_0039.png" id="40_vpv14"]
+[ext_resource type="Texture2D" uid="uid://e7dxhh027j0q" path="res://assets/Thick outline/tile_0040.png" id="41_k8fwh"]
+[ext_resource type="Texture2D" uid="uid://c1p43aki5ldc0" path="res://assets/Thick outline/tile_0041.png" id="42_fr6t3"]
+[ext_resource type="Texture2D" uid="uid://di2ocfvsy6peq" path="res://assets/Thick outline/tile_0042.png" id="43_tm4ct"]
+[ext_resource type="Texture2D" uid="uid://khd733aue4sg" path="res://assets/Thick outline/tile_0043.png" id="44_mitdk"]
+[ext_resource type="Texture2D" uid="uid://cvpb3f2pje5h5" path="res://assets/Thick outline/tile_0044.png" id="45_0n2l2"]
+[ext_resource type="Texture2D" uid="uid://dhnxplgxk81ri" path="res://assets/Thick outline/tile_0045.png" id="46_jwqj5"]
+[ext_resource type="Texture2D" uid="uid://bakj7fpo55ypc" path="res://assets/Thick outline/tile_0046.png" id="47_ymuxm"]
+[ext_resource type="Texture2D" uid="uid://bcfxt68adfegw" path="res://assets/Thick outline/tile_0047.png" id="48_7cwpx"]
+[ext_resource type="Texture2D" uid="uid://duwflja75201a" path="res://assets/Thick outline/tile_0048.png" id="49_cuam0"]
+[ext_resource type="Texture2D" uid="uid://bh44gpty376w0" path="res://assets/Thick outline/tile_0049.png" id="50_j3wrf"]
+[ext_resource type="Texture2D" uid="uid://c3egajrxbpjje" path="res://assets/Thick outline/tile_0050.png" id="51_1f6h2"]
+[ext_resource type="Texture2D" uid="uid://24newue4isfp" path="res://assets/Thick outline/tile_0051.png" id="52_sfp8e"]
+[ext_resource type="Texture2D" uid="uid://bw3a2b87digbx" path="res://assets/Thick outline/tile_0052.png" id="53_4ebdo"]
+[ext_resource type="Texture2D" uid="uid://c1sy3l8uiburb" path="res://assets/Thick outline/tile_0053.png" id="54_b51ub"]
+[ext_resource type="Texture2D" uid="uid://ddrhnf8oin8m" path="res://assets/Thick outline/tile_0054.png" id="55_0hkwk"]
+[ext_resource type="Texture2D" uid="uid://b0wphatdkyi73" path="res://assets/Thick outline/tile_0055.png" id="56_wp02h"]
+[ext_resource type="Texture2D" uid="uid://bbwm2uqft1eha" path="res://assets/Thick outline/tile_0056.png" id="57_8c0e0"]
+[ext_resource type="Texture2D" uid="uid://dvkfy8p50mbnp" path="res://assets/Thick outline/tile_0057.png" id="58_n3c06"]
+[ext_resource type="Texture2D" uid="uid://jrmrv3ar5ibv" path="res://assets/Thick outline/tile_0058.png" id="59_yxnq8"]
+[ext_resource type="Texture2D" uid="uid://djdaalnxxg0ll" path="res://assets/Thick outline/tile_0059.png" id="60_tglbg"]
+[ext_resource type="Texture2D" uid="uid://cad4anx7b1kgu" path="res://assets/Thick outline/tile_0060.png" id="61_csb2o"]
+[ext_resource type="Texture2D" uid="uid://0qexg0m6jlc0" path="res://assets/Thick outline/tile_0061.png" id="62_e4162"]
+[ext_resource type="Texture2D" uid="uid://c6nfnovtdxx73" path="res://assets/Thick outline/tile_0062.png" id="63_uaxf0"]
+[ext_resource type="Texture2D" uid="uid://bt8thkorogpcd" path="res://assets/Thick outline/tile_0063.png" id="64_1ikf2"]
+[ext_resource type="Texture2D" uid="uid://btnje5h470nol" path="res://assets/Thick outline/tile_0064.png" id="65_x1j45"]
+[ext_resource type="Texture2D" uid="uid://dipqp5lvvtrrk" path="res://assets/Thick outline/tile_0065.png" id="66_8oyp0"]
+[ext_resource type="Texture2D" uid="uid://r6rgeorma8v6" path="res://assets/Thick outline/tile_0066.png" id="67_283wa"]
+[ext_resource type="Texture2D" uid="uid://dwjlgu8ret7ew" path="res://assets/Thick outline/tile_0067.png" id="68_sc5yn"]
+[ext_resource type="Texture2D" uid="uid://dhgt68385m0k7" path="res://assets/Thick outline/tile_0068.png" id="69_eptjc"]
+[ext_resource type="Texture2D" uid="uid://dkj4ucjc6yhkh" path="res://assets/Thick outline/tile_0069.png" id="70_u416y"]
+[ext_resource type="Texture2D" uid="uid://cs4q84uewibbd" path="res://assets/Thick outline/tile_0070.png" id="71_4uwab"]
+[ext_resource type="Texture2D" uid="uid://bgt54mgdktxdt" path="res://assets/Thick outline/tile_0071.png" id="72_2rrer"]
+[ext_resource type="Texture2D" uid="uid://ryd21pvmr50v" path="res://assets/Thick outline/tile_0072.png" id="73_gt0bj"]
+[ext_resource type="Texture2D" uid="uid://c2s38sp3vqav1" path="res://assets/Thick outline/tile_0073.png" id="74_clfxd"]
+[ext_resource type="Texture2D" uid="uid://cflfqxowkx1so" path="res://assets/Thick outline/tile_0074.png" id="75_04xuo"]
+[ext_resource type="Texture2D" uid="uid://cp57po57nrdin" path="res://assets/Thick outline/tile_0075.png" id="76_gjv81"]
+[ext_resource type="Texture2D" uid="uid://ce4g1olwgeua" path="res://assets/Thick outline/tile_0076.png" id="77_etj2w"]
+[ext_resource type="Texture2D" uid="uid://crndq51x82e8" path="res://assets/Thick outline/tile_0077.png" id="78_5243s"]
+[ext_resource type="Texture2D" uid="uid://by5m5ro35x5ll" path="res://assets/Thick outline/tile_0078.png" id="79_xxwtp"]
+[ext_resource type="Texture2D" uid="uid://8gaxr6nab2el" path="res://assets/Thick outline/tile_0079.png" id="80_5pfdl"]
+[ext_resource type="Texture2D" uid="uid://dk3fqwf5tu8p0" path="res://assets/Thick outline/tile_0080.png" id="81_j11er"]
+[ext_resource type="Texture2D" uid="uid://blrtcbg7jwu5e" path="res://assets/Thick outline/tile_0081.png" id="82_tpcna"]
+[ext_resource type="Texture2D" uid="uid://uxyfsk2jxfg5" path="res://assets/Thick outline/tile_0082.png" id="83_enohs"]
+[ext_resource type="Texture2D" uid="uid://d35bpq83oln2s" path="res://assets/Thick outline/tile_0083.png" id="84_xok8g"]
+[ext_resource type="Texture2D" uid="uid://cmv26bf011s1s" path="res://assets/Thick outline/tile_0085.png" id="85_kvpd5"]
+[ext_resource type="Texture2D" uid="uid://walirp7vi345" path="res://assets/Thick outline/tile_0086.png" id="86_nlyx8"]
+[ext_resource type="Texture2D" uid="uid://ctwthll3yak6s" path="res://assets/Thick outline/tile_0087.png" id="87_mwtey"]
+[ext_resource type="Texture2D" uid="uid://bobdbekv1ckxy" path="res://assets/Thick outline/tile_0088.png" id="88_d144f"]
+[ext_resource type="Texture2D" uid="uid://brt8bxqk67vo4" path="res://assets/Thick outline/tile_0089.png" id="89_qweqg"]
+[ext_resource type="Texture2D" uid="uid://b4kxdc3q2hpb8" path="res://assets/Thick outline/tile_0090.png" id="90_18ciu"]
+
+[node name="large scene" type="Node2D"]
+
+[node name="Small Images" type="Node2D" parent="."]
+
+[node name="Tile0000" type="Sprite2D" parent="Small Images"]
+position = Vector2(330, 268)
+texture = ExtResource("1_hri0j")
+
+[node name="Tile0001" type="Sprite2D" parent="Small Images"]
+position = Vector2(383, 250)
+texture = ExtResource("2_i04jh")
+
+[node name="Tile0002" type="Sprite2D" parent="Small Images"]
+position = Vector2(406, 203)
+texture = ExtResource("3_uj60w")
+
+[node name="Tile0003" type="Sprite2D" parent="Small Images"]
+position = Vector2(399, 150)
+texture = ExtResource("4_n5too")
+
+[node name="Tile0004" type="Sprite2D" parent="Small Images"]
+position = Vector2(394, 107)
+texture = ExtResource("5_hodlh")
+
+[node name="Tile0005" type="Sprite2D" parent="Small Images"]
+position = Vector2(381, 53)
+texture = ExtResource("6_ubnfw")
+
+[node name="Tile0006" type="Sprite2D" parent="Small Images"]
+position = Vector2(379, -21)
+texture = ExtResource("7_jqrm6")
+
+[node name="Tile0007" type="Sprite2D" parent="Small Images"]
+position = Vector2(328, -29)
+texture = ExtResource("8_slbao")
+
+[node name="Tile0008" type="Sprite2D" parent="Small Images"]
+position = Vector2(26, 59)
+texture = ExtResource("9_j1vhp")
+
+[node name="Tile0009" type="Sprite2D" parent="Small Images"]
+position = Vector2(283, 262)
+texture = ExtResource("10_qcqme")
+
+[node name="Tile0010" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("11_1ir83")
+
+[node name="Tile0011" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("12_oevwy")
+
+[node name="Tile0012" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("13_xnaqc")
+
+[node name="Tile0013" type="Sprite2D" parent="Small Images"]
+position = Vector2(279, -37)
+texture = ExtResource("14_gfj7a")
+
+[node name="Tile0014" type="Sprite2D" parent="Small Images"]
+position = Vector2(215, -31)
+texture = ExtResource("15_u3ub6")
+
+[node name="Tile0015" type="Sprite2D" parent="Small Images"]
+position = Vector2(134, -21)
+texture = ExtResource("16_stg1g")
+
+[node name="Tile0016" type="Sprite2D" parent="Small Images"]
+position = Vector2(51, 251)
+texture = ExtResource("17_p0nqu")
+
+[node name="Tile0017" type="Sprite2D" parent="Small Images"]
+position = Vector2(-28, 221)
+texture = ExtResource("18_3qypr")
+
+[node name="Tile0018" type="Sprite2D" parent="Small Images"]
+position = Vector2(-57, 169)
+texture = ExtResource("19_qptll")
+
+[node name="Tile0019" type="Sprite2D" parent="Small Images"]
+position = Vector2(33, -45)
+texture = ExtResource("20_qwuwp")
+
+[node name="Tile0020" type="Sprite2D" parent="Small Images"]
+position = Vector2(-48, 97)
+texture = ExtResource("21_v1bga")
+
+[node name="Tile0021" type="Sprite2D" parent="Small Images"]
+position = Vector2(12, -12)
+texture = ExtResource("22_ujgv4")
+
+[node name="Tile0022" type="Sprite2D" parent="Small Images"]
+position = Vector2(73, -7)
+texture = ExtResource("23_2hgch")
+
+[node name="Tile0023" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("24_r7x4w")
+
+[node name="Tile0024" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("25_tv8bh")
+
+[node name="Tile0025" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("26_07u36")
+
+[node name="Tile0026" type="Sprite2D" parent="Small Images"]
+position = Vector2(-40, 52)
+texture = ExtResource("27_phtah")
+
+[node name="Tile0027" type="Sprite2D" parent="Small Images"]
+position = Vector2(312, 6)
+texture = ExtResource("28_180qq")
+
+[node name="Tile0028" type="Sprite2D" parent="Small Images"]
+position = Vector2(364, 14)
+texture = ExtResource("29_ekevt")
+
+[node name="Tile0029" type="Sprite2D" parent="Small Images"]
+position = Vector2(354, 137)
+texture = ExtResource("30_k0kat")
+
+[node name="Tile0030" type="Sprite2D" parent="Small Images"]
+position = Vector2(342, 93)
+texture = ExtResource("31_hsp08")
+
+[node name="Tile0031" type="Sprite2D" parent="Small Images"]
+position = Vector2(360, 184)
+texture = ExtResource("32_lw03m")
+
+[node name="Tile0032" type="Sprite2D" parent="Small Images"]
+position = Vector2(173, -41)
+texture = ExtResource("33_i6326")
+
+[node name="Tile0033" type="Sprite2D" parent="Small Images"]
+position = Vector2(325, 218)
+texture = ExtResource("34_bmieu")
+
+[node name="Tile0034" type="Sprite2D" parent="Small Images"]
+position = Vector2(280, 67)
+texture = ExtResource("35_bm55c")
+
+[node name="Tile0035" type="Sprite2D" parent="Small Images"]
+position = Vector2(19, 218)
+texture = ExtResource("36_w3ck2")
+
+[node name="Tile0036" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("37_1v5nb")
+
+[node name="Tile0037" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("38_uppoh")
+
+[node name="Tile0038" type="Sprite2D" parent="Small Images"]
+position = Vector2(23, 54)
+texture = ExtResource("39_vihgv")
+
+[node name="Tile0039" type="Sprite2D" parent="Small Images"]
+position = Vector2(298, 94)
+texture = ExtResource("40_vpv14")
+
+[node name="Tile0040" type="Sprite2D" parent="Small Images"]
+position = Vector2(281, 129)
+texture = ExtResource("41_k8fwh")
+
+[node name="Tile0041" type="Sprite2D" parent="Small Images"]
+position = Vector2(261, 178)
+texture = ExtResource("42_fr6t3")
+
+[node name="Tile0042" type="Sprite2D" parent="Small Images"]
+position = Vector2(253, 213)
+texture = ExtResource("43_tm4ct")
+
+[node name="Tile0043" type="Sprite2D" parent="Small Images"]
+position = Vector2(124, 224)
+texture = ExtResource("44_mitdk")
+
+[node name="Tile0044" type="Sprite2D" parent="Small Images"]
+position = Vector2(165, 226)
+texture = ExtResource("45_0n2l2")
+
+[node name="Tile0045" type="Sprite2D" parent="Small Images"]
+position = Vector2(208, 208)
+texture = ExtResource("46_jwqj5")
+
+[node name="Tile0046" type="Sprite2D" parent="Small Images"]
+position = Vector2(64, -36)
+texture = ExtResource("47_ymuxm")
+
+[node name="Tile0047" type="Sprite2D" parent="Small Images"]
+position = Vector2(347, 50)
+texture = ExtResource("48_7cwpx")
+
+[node name="Tile0048" type="Sprite2D" parent="Small Images"]
+position = Vector2(98, 253)
+texture = ExtResource("49_cuam0")
+
+[node name="Tile0049" type="Sprite2D" parent="Small Images"]
+position = Vector2(285, 219)
+texture = ExtResource("50_j3wrf")
+
+[node name="Tile0050" type="Sprite2D" parent="Small Images"]
+position = Vector2(231, -10)
+texture = ExtResource("51_1f6h2")
+
+[node name="Tile0051" type="Sprite2D" parent="Small Images"]
+position = Vector2(320, 153)
+texture = ExtResource("52_sfp8e")
+
+[node name="Tile0052" type="Sprite2D" parent="Small Images"]
+position = Vector2(228, 162)
+texture = ExtResource("53_4ebdo")
+
+[node name="Tile0053" type="Sprite2D" parent="Small Images"]
+position = Vector2(-18, 182)
+texture = ExtResource("54_b51ub")
+
+[node name="Tile0054" type="Sprite2D" parent="Small Images"]
+position = Vector2(70, 217)
+texture = ExtResource("55_0hkwk")
+
+[node name="Tile0055" type="Sprite2D" parent="Small Images"]
+position = Vector2(136, 200)
+texture = ExtResource("56_wp02h")
+
+[node name="Tile0056" type="Sprite2D" parent="Small Images"]
+position = Vector2(230, 124)
+texture = ExtResource("57_8c0e0")
+
+[node name="Tile0057" type="Sprite2D" parent="Small Images"]
+position = Vector2(279, 33)
+texture = ExtResource("58_n3c06")
+
+[node name="Tile0058" type="Sprite2D" parent="Small Images"]
+position = Vector2(194, 42)
+texture = ExtResource("59_yxnq8")
+
+[node name="Tile0059" type="Sprite2D" parent="Small Images"]
+position = Vector2(190, 172)
+texture = ExtResource("60_tglbg")
+
+[node name="Tile0060" type="Sprite2D" parent="Small Images"]
+position = Vector2(306, 177)
+texture = ExtResource("61_csb2o")
+
+[node name="Tile0061" type="Sprite2D" parent="Small Images"]
+position = Vector2(248, 105)
+texture = ExtResource("62_e4162")
+
+[node name="Tile0062" type="Sprite2D" parent="Small Images"]
+position = Vector2(322, 42)
+texture = ExtResource("63_uaxf0")
+
+[node name="Tile0063" type="Sprite2D" parent="Small Images"]
+position = Vector2(246, 64)
+texture = ExtResource("64_1ikf2")
+
+[node name="Tile0064" type="Sprite2D" parent="Small Images"]
+position = Vector2(127, 156)
+texture = ExtResource("65_x1j45")
+
+[node name="Tile0065" type="Sprite2D" parent="Small Images"]
+position = Vector2(81, 172)
+texture = ExtResource("66_8oyp0")
+
+[node name="Tile0066" type="Sprite2D" parent="Small Images"]
+position = Vector2(134, 134)
+texture = ExtResource("67_283wa")
+
+[node name="Tile0067" type="Sprite2D" parent="Small Images"]
+position = Vector2(140, 62)
+texture = ExtResource("68_sc5yn")
+
+[node name="Tile0068" type="Sprite2D" parent="Small Images"]
+position = Vector2(-22, 133)
+texture = ExtResource("69_eptjc")
+
+[node name="Tile0069" type="Sprite2D" parent="Small Images"]
+position = Vector2(21, 153)
+texture = ExtResource("70_u416y")
+
+[node name="Tile0070" type="Sprite2D" parent="Small Images"]
+position = Vector2(84, 91)
+texture = ExtResource("71_4uwab")
+
+[node name="Tile0071" type="Sprite2D" parent="Small Images"]
+position = Vector2(151, 33)
+texture = ExtResource("72_2rrer")
+
+[node name="Tile0072" type="Sprite2D" parent="Small Images"]
+position = Vector2(245, 10)
+texture = ExtResource("73_gt0bj")
+
+[node name="Tile0073" type="Sprite2D" parent="Small Images"]
+position = Vector2(158, 186)
+texture = ExtResource("74_clfxd")
+
+[node name="Tile0074" type="Sprite2D" parent="Small Images"]
+position = Vector2(181, 8)
+texture = ExtResource("75_04xuo")
+
+[node name="Tile0075" type="Sprite2D" parent="Small Images"]
+position = Vector2(42, 182)
+texture = ExtResource("76_gjv81")
+
+[node name="Tile0076" type="Sprite2D" parent="Small Images"]
+position = Vector2(199, 74)
+texture = ExtResource("77_etj2w")
+
+[node name="Tile0077" type="Sprite2D" parent="Small Images"]
+position = Vector2(185, 123)
+texture = ExtResource("78_5243s")
+
+[node name="Tile0078" type="Sprite2D" parent="Small Images"]
+position = Vector2(130, 91)
+texture = ExtResource("79_xxwtp")
+
+[node name="Tile0079" type="Sprite2D" parent="Small Images"]
+position = Vector2(109, 92)
+texture = ExtResource("80_5pfdl")
+
+[node name="Tile0080" type="Sprite2D" parent="Small Images"]
+position = Vector2(56, 126)
+texture = ExtResource("81_j11er")
+
+[node name="Tile0081" type="Sprite2D" parent="Small Images"]
+position = Vector2(85, 52)
+texture = ExtResource("82_tpcna")
+
+[node name="Tile0082" type="Sprite2D" parent="Small Images"]
+position = Vector2(-15, 15)
+texture = ExtResource("83_enohs")
+
+[node name="Tile0083" type="Sprite2D" parent="Small Images"]
+position = Vector2(95, 18)
+texture = ExtResource("84_xok8g")
+
+[node name="Tile0085" type="Sprite2D" parent="Small Images"]
+position = Vector2(93, 58)
+texture = ExtResource("85_kvpd5")
+
+[node name="Tile0086" type="Sprite2D" parent="Small Images"]
+position = Vector2(91, 123)
+texture = ExtResource("86_nlyx8")
+
+[node name="Tile0087" type="Sprite2D" parent="Small Images"]
+position = Vector2(-11, 88)
+texture = ExtResource("87_mwtey")
+
+[node name="Tile0088" type="Sprite2D" parent="Small Images"]
+position = Vector2(56, 90)
+texture = ExtResource("88_d144f")
+
+[node name="Tile0089" type="Sprite2D" parent="Small Images"]
+position = Vector2(40, 12)
+texture = ExtResource("89_qweqg")
+
+[node name="Tile0090" type="Sprite2D" parent="Small Images"]
+position = Vector2(22, 111)
+texture = ExtResource("90_18ciu")
